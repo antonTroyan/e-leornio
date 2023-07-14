@@ -1,7 +1,11 @@
+"use client"
 import Image from 'next/image'
 import { Separator } from "@/components/ui/separator"
+import { useToast } from "@/components/ui/use-toast"
 
 export default function Game() {
+
+    const { toast } = useToast()
 
     const data = () => {
         [
@@ -30,7 +34,7 @@ export default function Game() {
 
 
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between pt-52">
+        <main className="flex min-h-screen flex-col items-center justify-between pt-16">
             <div>
                 <div className="space-y-1">
                     <h4 className="text-2xl font-medium leading-none">Thin, flexible string or rope made from several twisted strands</h4>
@@ -40,7 +44,12 @@ export default function Game() {
                 </div>
                 <Separator className="my-4" />
                 <div className="flex h-5 items-center space-x-4 text-2xl">
-                    <div>Cord</div>
+                    <div onClick={() => {
+                        toast({
+                            title: "Scheduled: Catch up",
+                            description: "Friday, February 10, 2023 at 5:57 PM",
+                        })
+                    }}>Cord</div>
                     <Separator orientation="vertical" />
                     <div>Feather</div>
                     <Separator orientation="vertical" />
