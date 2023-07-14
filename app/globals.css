@@ -37,8 +37,8 @@
   }
  
   .dark {
-    --background: dark;
-    --foreground: white;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
  
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
@@ -67,6 +67,8 @@
     --ring: 217.2 32.6% 17.5%;
   }
 }
+
+
  
 @layer base {
   * {
