@@ -2,10 +2,16 @@
 import Image from 'next/image'
 import { Separator } from "@/components/ui/separator"
 import { useToast } from "@/components/ui/use-toast"
+import React, { useState } from 'react';
+import { type } from 'os';
 
 export default function Game() {
 
-    const { toast } = useToast()
+    type entity = {
+        meaning: string,
+        example: string,
+        word: string
+    }
 
     const data = () => {
         [
@@ -32,6 +38,41 @@ export default function Game() {
         ]
     }
 
+    const currentData = {
+        correct: {
+            meaning: "",
+            example: "",
+            word: ""
+        },
+        wrong: [
+            "", "", "", ""
+        ]
+    }
+
+    const { toast } = useToast()
+    const [count, setCount] = React.useState(0);
+
+    const getRandom = (array: Array<entity>): entity => {
+        return array[Math.floor(Math.random() * array.length)]
+    }
+
+    const fillCurrentData = (array: Array<entity>) => {
+        const randomCorrect = getRandom(array)
+
+        currentData.correct = randomCorrect
+        let wrongElementsCounter = 0
+        while (wrongElementsCounter < 2) {
+            let randomWrong = getRandom(array)
+            if (randomWrong !== randomCorrect) {
+                currentData.wrong[wrongElementsCounter] = randomWrong.word
+            }
+            wrongElementsCounter++
+        }
+    }
+
+    const handleNext = () => {
+
+    }
 
     return (
         <main className="flex min-h-screen flex-col items-center justify-between pt-16">
