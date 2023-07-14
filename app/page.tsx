@@ -5,8 +5,15 @@ import { ThemeProvider } from "@/components/theme-provider"
 
 export default function Home() {
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-      <Main/>
-    </ThemeProvider>
+    <>
+      <html lang="en" suppressHydrationWarning>
+        <head />
+        <body>
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+            <Main />
+          </ThemeProvider>
+        </body>
+      </html>
+    </>
   )
 }
