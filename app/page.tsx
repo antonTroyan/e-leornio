@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Separator } from "@/components/ui/separator"
-import Main from '@/components/ui/main'
+import Game from '@/components/ui/main'
 import { ThemeProvider } from "@/components/theme-provider"
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
         <head />
         <body>
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-            <Main />
+            <Game />
           </ThemeProvider>
         </body>
       </html>
