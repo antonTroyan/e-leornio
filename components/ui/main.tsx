@@ -46,8 +46,9 @@ export default function Game() {
                 <div className="flex h-5 items-center space-x-4 text-2xl">
                     <div onClick={() => {
                         toast({
-                            title: "Scheduled: Catch up",
-                            description: "Friday, February 10, 2023 at 5:57 PM",
+                            variant: "destructive",
+                            title: "Thin, flexible string or rope made from several twisted strands",
+                            description: "Cord",
                         })
                     }}>Cord</div>
                     <Separator orientation="vertical" />
