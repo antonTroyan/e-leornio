@@ -47,20 +47,22 @@ export default function Game() {
 
     }
 
-    const createVariants = (): React.JSX.Element[] => {
+    const createVariants = () => {
 
         debugger
         return currentData.wrong.map(element => {
             return (
-                <div key={element} onClick={() => {
-                    toast({
-                        variant: "destructive",
-                        title: "Thin, flexible string or rope made from several twisted strands",
-                        description: "Cord",
-                    })
-                }}>{element}
-                <Separator orientation="vertical" />
-                </div>
+                <>
+                    <div key={element} onClick={() => {
+                        toast({
+                            variant: "destructive",
+                            title: "Thin, flexible string or rope made from several twisted strands",
+                            description: "Cord",
+                        })
+                    }}>{element}
+                    </div>
+                    <Separator orientation="vertical" />
+                </>
             )
         })
     }
