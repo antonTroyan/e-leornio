@@ -44,7 +44,7 @@ export default function Game() {
     }
 
     const handleNext = () => {
-
+        initData(Data)
     }
 
     const createVariants = () => {
@@ -60,10 +60,11 @@ export default function Game() {
                         if (element !== currentData.correct.word) {
                             toast({
                                 variant: "destructive",
-                                title: "Thin, flexible string or rope made from several twisted strands",
-                                description: "Cord",
+                                title: currentData.correct.meaning,
+                                description: currentData.correct.word,
                             })
                         }
+                        handleNext()
                     }}>{element}
                     </div>
                     <Separator orientation="vertical" />
