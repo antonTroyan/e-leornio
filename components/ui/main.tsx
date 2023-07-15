@@ -33,11 +33,13 @@ export default function Game() {
         const randomWrongResult: string[] = []
 
         let wrongElementsCounter: number = 0
-        while (wrongElementsCounter < 3) {
+        while (wrongElementsCounter < 2) {
             let randomWrong: entity = getRandom(array)
-            if (randomWrong !== randomCorrect) {
+            debugger
+            if (randomWrong !== randomCorrect && !randomWrongResult.some(e => e === randomWrong.word)) {
                 randomWrongResult[wrongElementsCounter] = randomWrong.word
                 wrongElementsCounter++
+                debugger
             }
         }
         setCurrentData(e => ({ ...e, correct: randomCorrect, wrong: randomWrongResult }))
