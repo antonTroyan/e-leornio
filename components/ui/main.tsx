@@ -35,11 +35,9 @@ export default function Game() {
         let wrongElementsCounter: number = 0
         while (wrongElementsCounter < 2) {
             let randomWrong: entity = getRandom(array)
-            debugger
             if (randomWrong !== randomCorrect && !randomWrongResult.some(e => e === randomWrong.word)) {
                 randomWrongResult[wrongElementsCounter] = randomWrong.word
                 wrongElementsCounter++
-                debugger
             }
         }
         setCurrentData(e => ({ ...e, correct: randomCorrect, wrong: randomWrongResult }))
@@ -50,17 +48,22 @@ export default function Game() {
     }
 
     const createVariants = () => {
+        const allVariants: string[] = currentData.wrong
+        if (!allVariants.some(e => e === currentData.correct.word)) {
+            allVariants.push(currentData.correct.word)
+        }
 
-        debugger
         return currentData.wrong.map(element => {
             return (
                 <>
                     <div key={element} onClick={() => {
-                        toast({
-                            variant: "destructive",
-                            title: "Thin, flexible string or rope made from several twisted strands",
-                            description: "Cord",
-                        })
+                        if (element !== currentData.correct.word) {
+                            toast({
+                                variant: "destructive",
+                                title: "Thin, flexible string or rope made from several twisted strands",
+                                description: "Cord",
+                            })
+                        }
                     }}>{element}
                     </div>
                     <Separator orientation="vertical" />
@@ -73,9 +76,9 @@ export default function Game() {
         <main className="flex min-h-screen flex-col items-center justify-between pt-16">
             <div>
                 <div className="space-y-1">
-                    <h4 className="text-2xl font-medium leading-none">Thin, flexible string or rope made from several twisted strands</h4>
+                    <h4 className="text-2xl font-medium leading-none">{currentData.correct.meaning}</h4>
                     <p className="text-2xl text-muted-foreground">
-                        Hang the picture from a rail on a length of [...].
+                        {currentData.correct.example}
                     </p>
                 </div>
                 <Separator className="my-4" />
