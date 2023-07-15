@@ -26,7 +26,9 @@ export default function Game() {
         ]
     });
 
-    const [counter, setCounter] = useState(0)
+    const [generalCounter, setGeneralCounter] = useState(0)
+    const [correctCounter, setCorrectCounter] = useState(0)
+    const [percentCounter, setPercentCounter] = useState(0)
 
     useEffect(() => {
         initData(Data); //called once, on init
@@ -53,9 +55,14 @@ export default function Game() {
         setCurrentData(e => ({ ...e, correct: randomCorrect, wrong: randomWrongResult }))
     }
 
-    const handleNext = () => {
+    const handleNext = (wasCorrect:boolean) => {
         initData(Data)
-        setCounter(prev => prev + 1)
+        setGeneralCounter(prev => prev + 1)
+        if (wasCorrect) {
+            setCorrectCounter(prev => prev + 1)
+        }
+        const percent = correctCounter / generalCounter * 100
+        setPercentCounter(Math.ceil(percent))
     }
 
     const createVariants = () => {
@@ -68,14 +75,15 @@ export default function Game() {
             return (
                 <>
                     <div key={element} onClick={() => {
-                        if (element !== currentData.correct.word) {
+                        const wasCorrect = element === currentData.correct.word
+                        if (!wasCorrect) {
                             toast({
                                 variant: "destructive",
                                 title: currentData.correct.meaning,
                                 description: currentData.correct.word,
                             })
                         }
-                        handleNext()
+                        handleNext(wasCorrect)
                     }}>{element}
                     </div>
                     <Separator orientation="vertical" />
@@ -90,16 +98,16 @@ export default function Game() {
                 <Table>
                     <TableHeader>
                         <TableRow>
-                            <TableHead className="text-center">Amount</TableHead>
-                            <TableHead className="text-center">Correct</TableHead>
-                            <TableHead className="text-center">Percent</TableHead>
+                            <TableHead className="text-center">All</TableHead>
+                            <TableHead className="text-center">Correct №</TableHead>
+                            <TableHead className="text-center">Correct %</TableHead>
                         </TableRow>
                     </TableHeader>
                     <TableBody>
                         <TableRow>
-                            <TableCell className="text-center">{counter}</TableCell>
-                            <TableCell className="text-center">{counter}</TableCell>
-                            <TableCell className="text-center">{counter}</TableCell>
+                            <TableCell className="text-center">{generalCounter}</TableCell>
+                            <TableCell className="text-center">{correctCounter}</TableCell>
+                            <TableCell className="text-center">{percentCounter}</TableCell>
                         </TableRow>
                     </TableBody>
                 </Table>
