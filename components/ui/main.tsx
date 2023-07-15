@@ -4,6 +4,14 @@ import { useToast } from "@/components/ui/use-toast"
 import React, { useState, useEffect } from 'react';
 import Data from './data';
 import { entity } from '../types';
+import {
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+} from "@/components/ui/table"
 
 export default function Game() {
 
@@ -78,8 +86,23 @@ export default function Game() {
 
     return (
         <>
-            <div className="absolute left-0 top-0 h-16 w-16 ...">
-                <p>Answers {counter}</p>
+            <div className="absolute left-0 top-0  ...">
+                <Table>
+                    <TableHeader>
+                        <TableRow>
+                            <TableHead className="text-center">Amount</TableHead>
+                            <TableHead className="text-center">Correct</TableHead>
+                            <TableHead className="text-center">Percent</TableHead>
+                        </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                        <TableRow>
+                            <TableCell className="text-center">{counter}</TableCell>
+                            <TableCell className="text-center">{counter}</TableCell>
+                            <TableCell className="text-center">{counter}</TableCell>
+                        </TableRow>
+                    </TableBody>
+                </Table>
             </div>
             <main className="flex min-h-screen flex-col items-center justify-between pt-16">
                 <div>
