@@ -18,28 +18,29 @@ export default function Game() {
         ]
     });
 
+    useEffect(() => {
+        initData(Data); //called once, on init
+    }, []);
+
     const { toast } = useToast()
 
     const getRandom = (array: Array<entity>): entity => {
         return array[Math.floor(Math.random() * array.length)]
     }
 
-    const fillCurrentData = (array: Array<entity>) => {
-        debugger
-        const randomCorrect = getRandom(array)
-        const randomWrongResult:string[] = []
+    const initData = (array: Array<entity>) => {
+        const randomCorrect: entity = getRandom(array)
+        const randomWrongResult: string[] = []
 
-        let wrongElementsCounter = 0
+        let wrongElementsCounter: number = 0
         while (wrongElementsCounter < 3) {
-            let randomWrong = getRandom(array)
-            if (randomWrong !== randomCorrect // add element only if it doesn match correct and was not added earlier
-                && !currentData.wrong.some(element => element === randomWrong.word)) {
-
+            let randomWrong: entity = getRandom(array)
+            if (randomWrong !== randomCorrect) {
                 randomWrongResult[wrongElementsCounter] = randomWrong.word
                 wrongElementsCounter++
             }
         }
-        setCurrentData({...currentData, correct: randomCorrect, wrong: randomWrongResult})
+        setCurrentData(e => ({ ...e, correct: randomCorrect, wrong: randomWrongResult }))
     }
 
     const handleNext = () => {
@@ -47,22 +48,18 @@ export default function Game() {
     }
 
     const createVariants = (): React.JSX.Element[] => {
-        if (currentData.correct.word == "") {
-            debugger
-            fillCurrentData(Data);
-        }
 
+        debugger
         return currentData.wrong.map(element => {
             return (
-                <div key={element}>
-                    <div onClick={() => {
-                        toast({
-                            variant: "destructive",
-                            title: "Thin, flexible string or rope made from several twisted strands",
-                            description: "Cord",
-                        })
-                    }}>{element}</div>
-                    <Separator orientation="vertical" />
+                <div key={element} onClick={() => {
+                    toast({
+                        variant: "destructive",
+                        title: "Thin, flexible string or rope made from several twisted strands",
+                        description: "Cord",
+                    })
+                }}>{element}
+                <Separator orientation="vertical" />
                 </div>
             )
         })
