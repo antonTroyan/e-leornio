@@ -18,6 +18,8 @@ export default function Game() {
         ]
     });
 
+    const [counter, setCounter] = useState(0)
+
     useEffect(() => {
         initData(Data); //called once, on init
     }, []);
@@ -45,6 +47,7 @@ export default function Game() {
 
     const handleNext = () => {
         initData(Data)
+        setCounter(prev => prev + 1)
     }
 
     const createVariants = () => {
@@ -74,19 +77,24 @@ export default function Game() {
     }
 
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between pt-16">
-            <div>
-                <div className="space-y-1">
-                    <h4 className="text-2xl font-medium leading-none">{currentData.correct.meaning}</h4>
-                    <p className="text-2xl text-muted-foreground">
-                        {currentData.correct.example}
-                    </p>
-                </div>
-                <Separator className="my-4" />
-                <div className="flex h-5 items-center space-x-4 text-2xl">
-                    {createVariants()}
-                </div>
+        <>
+            <div className="absolute left-0 top-0 h-16 w-16 ...">
+                <p>Answers {counter}</p>
             </div>
-        </main>
+            <main className="flex min-h-screen flex-col items-center justify-between pt-16">
+                <div>
+                    <div className="space-y-1">
+                        <h4 className="text-2xl font-medium leading-none">{currentData.correct.meaning}</h4>
+                        <p className="text-2xl text-muted-foreground">
+                            {currentData.correct.example}
+                        </p>
+                    </div>
+                    <Separator className="my-4" />
+                    <div className="flex h-5 items-center space-x-4 text-2xl">
+                        {createVariants()}
+                    </div>
+                </div>
+            </main>
+        </>
     )
 }
