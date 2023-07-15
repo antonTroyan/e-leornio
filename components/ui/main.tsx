@@ -1,42 +1,11 @@
 "use client"
-import Image from 'next/image'
 import { Separator } from "@/components/ui/separator"
 import { useToast } from "@/components/ui/use-toast"
-import React, { useState } from 'react';
-import { type } from 'os';
+import React, { useState, useEffect } from 'react';
+import Data from './data';
+import { entity } from '../types';
 
 export default function Game() {
-
-    type entity = {
-        meaning: string,
-        example: string,
-        word: string
-    }
-
-    const data = () => {
-        [
-            {
-                meaning: "Thin, flexible string or rope made from several twisted strands",
-                example: "Hang the picture from a rail on a length of [...].",
-                word: "Cord"
-            },
-            {
-                meaning: "Push or shake (someone or something) abruptly and roughly",
-                example: "A surge in the crowd behind him [...]ed him forwards.",
-                word: "Jolt"
-            },
-            {
-                meaning: "Silly / foolish",
-                example: "Don't ask such [...] questions",
-                word: "Daft"
-            },
-            {
-                meaning: "An uncomfortable sensation on the skin that causes a desire to scratch ",
-                example: "The bite [...]ed like crazy",
-                word: "Itch"
-            }
-        ]
-    }
 
     const currentData = {
         correct: {
@@ -48,6 +17,12 @@ export default function Game() {
             "", "", "", ""
         ]
     }
+
+
+    // HOOKS
+    useEffect(() => {
+        fillCurrentData(Data);
+    }, []);
 
     const { toast } = useToast()
     const [count, setCount] = React.useState(0);
@@ -61,13 +36,16 @@ export default function Game() {
 
         currentData.correct = randomCorrect
         let wrongElementsCounter = 0
-        while (wrongElementsCounter < 2) {
+        while (wrongElementsCounter < 3) {
             let randomWrong = getRandom(array)
-            if (randomWrong !== randomCorrect) {
+            if (randomWrong !== randomCorrect // add element only if it doesn match correct and was not added earlier
+                    && !currentData.wrong.some(element => element === randomWrong.word)) { 
+
                 currentData.wrong[wrongElementsCounter] = randomWrong.word
+                wrongElementsCounter++
             }
-            wrongElementsCounter++
         }
+        console.log(currentData)
     }
 
     const handleNext = () => {
