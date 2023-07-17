@@ -3,88 +3,88 @@ import { entity } from "../types"
 const Data: entity[] =
     [
         {
-            meaning: "Thin, flexible string or rope made from several twisted strands",
-            example: "Hang the picture from a rail on a length of [...].",
-            word: "Cord",
-            tags: ["#harry_potter", "#films"]
+            meaning: "The crux or central point of a matter",
+            example: "The [...] of the problem lies elsewhere",
+            word: "Nub",
+            tags: ["brickleberry"]
         },
         {
-            meaning: "Push or shake (someone or something) abruptly and roughly",
-            example: "A surge in the crowd behind him [...]ed him forwards.",
-            word: "Jolt",
-            tags: ["#harry_potter", "#films"]
+            meaning: "A hard grey rock consisting of nearly pure silica (chert), occurring chiefly as nodules in chalk",
+            example: "Houses built of brick and [...]",
+            word: "Flint",
+            tags: ["brickleberry"]
         },
         {
-            meaning: "Silly / foolish",
-            example: "Don't ask such [...] questions",
-            word: "Daft",
-            tags: ["#harry_potter", "#films"]
+            meaning: "A woman who serves as an adult leader or supervisor of a cub scout den",
+            example: "The official [...] climbed slowly, carrying a heavy hamper of food.",
+            word: "Den mother",
+            tags: ["brickleberry"]
         },
         {
-            meaning: "An uncomfortable sensation on the skin that causes a desire to scratch ",
-            example: "The bite [...]ed like crazy",
-            word: "Itch",
-            tags: ["#harry_potter", "#films"]
+            meaning: "A state of total disorder",
+            example: "My career was in a [...]",
+            word: "Shambles",
+            tags: ["brickleberry"]
         },
         {
-            meaning: "To attract, entice, or tempt; Allure",
-            example: "We've got the trap set up, but we need some kind of bait to [...] the rabbits [...].",
-            word: "Lure in",
-            tags: ["#how_heavy_are_the_dumbbells_you_lift?", "#anime"]
+            meaning: "Comfortable, warm, and cosy",
+            example: "She had to stay in her [...] bed until the last second",
+            word: "Snuggly",
+            tags: ["brickleberry"]
         },
         {
-            meaning: "Shiny and smooth; Superficially attractive, stylish, and suggesting wealth",
-            example: "Thick, [...], manageable hair; A [...] TV miniseries",
-            word: "Glossy",
-            tags: ["#how_heavy_are_the_dumbbells_you_lift?", "#anime"]
+            meaning: "A large farm, especially in North America or Australia, where cattle or other animals are bred",
+            example: "A beef cattle [...]",
+            word: "Ranch",
+            tags: ["brickleberry"]
         },
         {
-            meaning: "Someone who is very serious about their health",
-            example: "My aunt is a [...]. She runs six miles every morning before work.",
-            word: "Health nut",
-            tags: ["#how_heavy_are_the_dumbbells_you_lift?", "#anime"]
+            meaning: "Agreeing with or consenting to a statement or request; Supportive, hopeful, or encouraging",
+            example: "An affirmative answer",
+            word: "Affirmative",
+            tags: ["brickleberry"]
         },
         {
-            meaning: "A routine task, especially a household one",
-            example: "The early risers were up and about, doing their [...]",
-            word: "Chore",
-            tags: ["#how_heavy_are_the_dumbbells_you_lift?", "#anime"]
+            meaning: "The health, happiness, and fortunes of a person or group",
+            example: "They don't give a damn about the [...] of their families",
+            word: "Welfare",
+            tags: ["brickleberry"]
         },
         {
-            meaning: "Infatuated or obsessed.",
-            example: "Gus is still hopelessly [...] by Lee",
-            word: "Twitterpated",
-            tags: ["#how_heavy_are_the_dumbbells_you_lift?", "#anime"]
+            meaning: "A small axe with a short handle for use in one hand",
+            example: "If you are a boy, go and get your [...]",
+            word: "Hatchet",
+            tags: ["brickleberry"]
         },
         {
-            meaning: "(of a horse) of pure breed, especially of a breed originating from English mares and Arab stallions and widely used as racehorses",
-            example: "Some riders will only buy [...] horses",
-            word: "Thoroughbred",
-            tags: ["#how_heavy_are_the_dumbbells_you_lift?", "#anime"]
+            meaning: "A dish of cooked meat cut into small pieces and cooked again, usually with potatoes; To do something very badly",
+            example: "He made a complete [...] of the last question",
+            word: "Hash",
+            tags: ["brickleberry"]
         },
         {
-            meaning: "Extreme tiredness resulting from mental or physical exertion or illness; ",
-            example: "He was nearly dead with [...]",
-            word: "Fatigue",
-            tags: ["#how_heavy_are_the_dumbbells_you_lift?", "#anime"]
+            meaning: "A fence or boundary formed by closely growing bushes or shrubs; A way of protecting oneself against financial loss or other adverse circumstances",
+            example: "A privet [...]; Index-linked gilts are a useful [...] against inflation",
+            word: "Hedge",
+            tags: ["brickleberry"]
         },
         {
-            meaning: "Not easily bent or changed in shape; rigid; Severe or strong.",
-            example: "A [...] black collar; They face [...] fines and a possible jail sentence",
-            word: "Stiff",
-            tags: ["#how_heavy_are_the_dumbbells_you_lift?", "#anime"]
+            meaning: "(of an item of food) having the cavity filled with a savoury or sweet mixture",
+            example: "[...] green peppers",
+            word: "Stuffed",
+            tags: ["brickleberry"]
         },
         {
-            meaning: "Comfortable, warm, and cosy; well protected from the weather or cold",
-            example: "She was safe and [...] in Ruth's arms",
-            word: "Snug",
-            tags: ["#how_heavy_are_the_dumbbells_you_lift?", "#anime"]
+            meaning: "Rubbish such as paper, cans, and bottles left lying in an open or public place; Number of young animals born to an animal at one time",
+            example: "Always clear up after a picnic and never drop [...]",
+            word: "Litter",
+            tags: ["brickleberry"]
         },
         {
-            meaning: "Crouch or sit with one's knees bent and one's heels close to or touching one's buttocks or the back of one's thighs.",
-            example: "I [...]ed down in front of him",
-            word: "Squat",
-            tags: ["#how_heavy_are_the_dumbbells_you_lift?", "#anime"]
+            meaning: "A minor wrongdoing",
+            example: "The player can expect a suspension for his latest [...]",
+            word: "Misdemeanor",
+            tags: ["brickleberry"]
         },
     ]
 
