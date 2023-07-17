@@ -86,6 +86,48 @@ const Data: entity[] =
             word: "Misdemeanor",
             tags: ["brickleberry"]
         },
+        {
+            meaning: "In a way that is against the rules of a religion or morally wrong",
+            example: "Even those projects that were successful were [...] wasteful.",
+            word: "Sinfully",
+            tags: ["shiki"]
+        },
+        {
+            meaning: "Move in a quivering way; flicker; Become weaker; falter.",
+            example: "The flame [...] in the draught",
+            word: "Waver",
+            tags: ["shiki"]
+        },
+        {
+            meaning: "Pull or knock down (a building)",
+            example: "The house was [...] to make way for the shopping centre",
+            word: "Demolished",
+            tags: ["shiki"]
+        },
+        {
+            meaning: "Unfair play in a game or sport",
+            example: "The referee sent off two players for [...]",
+            word: "Foul play",
+            tags: ["shiki"]
+        },
+        {
+            meaning: "(of something intended to be entertaining) uninspiring and dull",
+            example: "I found the programme pretty [...] and not very informative",
+            word: "Lame",
+            tags: ["shiki"]
+        },
+        {
+            meaning: "A strip of plastic, metal, or wood with a row of narrow teeth, used for untangling or arranging the hair.",
+            example: "She [...] her hair and put some lipstick on",
+            word: "Comb",
+            tags: ["shiki"]
+        },
+        {
+            meaning: "Begin a journey",
+            example: "They [...] together in the small car",
+            word: "Set off",
+            tags: ["shiki"]
+        },
     ]
 
 
