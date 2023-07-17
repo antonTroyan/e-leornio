@@ -40,7 +40,7 @@ const Data: entity[] =
         },
         {
             meaning: "Agreeing with or consenting to a statement or request; Supportive, hopeful, or encouraging",
-            example: "An affirmative answer",
+            example: "An [...] answer",
             word: "Affirmative",
             tags: ["brickleberry"]
         },
