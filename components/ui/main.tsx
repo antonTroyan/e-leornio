@@ -48,24 +48,29 @@ export default function Game() {
         return array[Math.floor(Math.random() * array.length)]
     }
 
-    const initData = (array: Array<entity>) => {
+    const prepareDataIteration = (array: Array<entity>): Array<entity> => {
         const shuffledArray = array.sort(() => Math.random() - 0.5)
-        const sorted = array.sort((e1, e2) => e1.complexity - e2.complexity)
+        const sorted = shuffledArray.sort((e1, e2) => e2.complexity - e1.complexity)
 
+        return sorted
+    }
+
+    const initData = (array: Array<entity>) => {
         let index: number = 0
         let shouldContinue: boolean = true
         while (index <= array.length && shouldContinue) {
-            if ((Math.random() * 100) < sorted[index].complexity) { //if random less that complexity => take it. Or try take another
+            if ((Math.random() * 100) < array[index].complexity) { //if random less that complexity => take it. Or try take another
                 shouldContinue = false
             } else {
                 index++
             }
         }
-        const mainWord: entity = sorted[index]
+        const mainWord: entity = array[index]
+        console.log("initData")
+        console.log(allDataArray)
         setCurrentCorrectIndex(index)
-        console.log("CURRENT")
+        console.log("currentCorrectIndex")
         console.log(currentCorrectIndex)
-
         const randomWrongResult: string[] = []
         let wrongElementsCounter: number = 0
         while (wrongElementsCounter < 2) {
@@ -80,27 +85,28 @@ export default function Game() {
 
     const handleNext = (wasCorrect:boolean) => {
         setGeneralCounter(prev => prev + 1)
-                console.log("NEXT")
-                console.log(currentCorrectIndex)
+        console.log("INPUT")
+        console.log(allDataArray)
         if (wasCorrect) {
             setCorrectCounter(prev => prev + 1)
             setAllDataArray(array => {
-                console.log(array)
                 const newArray = cloneDeep(array)
-                newArray[currentCorrectIndex].complexity -= DECREMENT_COMPLEXITY_STEP
-                console.log(newArray)
+                newArray[newArray.findIndex((e => e.word === currentData.correct.word))].complexity -= DECREMENT_COMPLEXITY_STEP
                 return newArray
             })
         } else {
             setAllDataArray(array => {
                 const newArray = cloneDeep(array)
-                newArray[currentCorrectIndex].complexity += INCREMENT_COMPLEXITY_STEP
+                newArray[newArray.findIndex((e => e.word === currentData.correct.word))].complexity += INCREMENT_COMPLEXITY_STEP
                 return newArray
             })
         }
         const percent = correctCounter / generalCounter * 100
         setPercentCounter(Math.ceil(percent))
-        initData(allDataArray)
+
+        console.log("OUTPUT")
+        console.log(allDataArray)
+        initData(prepareDataIteration(allDataArray))
     }
 
     const createVariants = () => {
