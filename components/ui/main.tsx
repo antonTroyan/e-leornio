@@ -63,6 +63,8 @@ export default function Game() {
         }
         const mainWord: entity = sorted[index]
         setCurrentCorrectIndex(index)
+        console.log("CURRENT")
+        console.log(currentCorrectIndex)
 
         const randomWrongResult: string[] = []
         let wrongElementsCounter: number = 0
@@ -77,13 +79,16 @@ export default function Game() {
     }
 
     const handleNext = (wasCorrect:boolean) => {
-
         setGeneralCounter(prev => prev + 1)
+                console.log("NEXT")
+                console.log(currentCorrectIndex)
         if (wasCorrect) {
             setCorrectCounter(prev => prev + 1)
             setAllDataArray(array => {
+                console.log(array)
                 const newArray = cloneDeep(array)
                 newArray[currentCorrectIndex].complexity -= DECREMENT_COMPLEXITY_STEP
+                console.log(newArray)
                 return newArray
             })
         } else {
