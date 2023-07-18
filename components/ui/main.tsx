@@ -12,10 +12,10 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
+import cloneDeep from 'lodash/cloneDeep';
 
 export default function Game() {
 
-    const DEFAULT_COMPLEXITY = 40;
     const INCREMENT_COMPLEXITY_STEP = 5;
     const DECREMENT_COMPLEXITY_STEP = 5;
 
@@ -30,7 +30,7 @@ export default function Game() {
         ]
     });
 
-    const [allDataArray, setAllDataArray] = useState([])
+    const [allDataArray, setAllDataArray] = useState(Array<entity>)
     const [currentCorrectIndex, setCurrentCorrectIndex] = useState(0)
 
     const [generalCounter, setGeneralCounter] = useState(0)
@@ -38,9 +38,8 @@ export default function Game() {
     const [percentCounter, setPercentCounter] = useState(0)
 
     useEffect(() => {
-        const dataWithComplexity = Data.map(e => ({...e, complexity: DEFAULT_COMPLEXITY}))
-        setAllDataArray(dataWithComplexity) //fill local data
-        initData(dataWithComplexity) //called once, on init
+        setAllDataArray(Data) //fill local data
+        initData(Data) //called once, on init
     }, []);
 
     const { toast } = useToast()
@@ -51,7 +50,7 @@ export default function Game() {
 
     const initData = (array: Array<entity>) => {
         const shuffledArray = array.sort(() => Math.random() - 0.5)
-        const sorted = array.sort((e1, e2) => e1.complexity < e2.complexity)
+        const sorted = array.sort((e1, e2) => e1.complexity - e2.complexity)
 
         let index: number = 0
         let shouldContinue: boolean = true
@@ -78,12 +77,21 @@ export default function Game() {
     }
 
     const handleNext = (wasCorrect:boolean) => {
+
         setGeneralCounter(prev => prev + 1)
         if (wasCorrect) {
             setCorrectCounter(prev => prev + 1)
-            allDataArray[currentCorrectIndex].complexity -= DECREMENT_COMPLEXITY_STEP
+            setAllDataArray(array => {
+                const newArray = cloneDeep(array)
+                newArray[currentCorrectIndex].complexity -= DECREMENT_COMPLEXITY_STEP
+                return newArray
+            })
         } else {
-            allDataArray[currentCorrectIndex].complexity += INCREMENT_COMPLEXITY_STEP
+            setAllDataArray(array => {
+                const newArray = cloneDeep(array)
+                newArray[currentCorrectIndex].complexity += INCREMENT_COMPLEXITY_STEP
+                return newArray
+            })
         }
         const percent = correctCounter / generalCounter * 100
         setPercentCounter(Math.ceil(percent))
@@ -140,7 +148,7 @@ export default function Game() {
             <main className="flex min-h-screen flex-col items-center justify-between pt-16">
                 <div>
                     <div className="space-y-1">
-                        <h4 className="text-2xl font-medium leading-none">{currentData.correct.meaning} : {currentData.correct.complexity}</h4>
+                        <h4 className="text-2xl font-medium leading-none">{currentData.correct.meaning} </h4>
                         <p className="text-2xl text-muted-foreground">
                             {currentData.correct.example}
                         </p>

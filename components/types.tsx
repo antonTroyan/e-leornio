@@ -6,3 +6,10 @@ export type entity = {
     tags: string[]
     complexity: number
 }
+
+export type rawEntity = {
+    meaning: string,
+    example: string,
+    word: string
+    tags: string[]
+}

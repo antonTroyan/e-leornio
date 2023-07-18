@@ -1,6 +1,7 @@
 import { entity } from "../types"
+import { rawEntity } from "../types"
 
-const Data: entity[] =
+const rawData: rawEntity[] =
     [
         {
             meaning: "The crux or central point of a matter",
@@ -136,5 +137,13 @@ const Data: entity[] =
         },
     ]
 
+
+const DEFAULT_COMPLEXITY = 40;
+
+const prepareData = (rawData:rawEntity[]) => {
+    return rawData.map(e => ({...e, complexity: DEFAULT_COMPLEXITY}))
+}
+
+const Data = prepareData(rawData)
 
 export default Data
