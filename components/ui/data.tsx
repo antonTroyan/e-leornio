@@ -128,6 +128,12 @@ const Data: entity[] =
             word: "Set off",
             tags: ["shiki"]
         },
+        {
+            meaning: "Changing frequently, especially as regards one's loyalties or affections",
+            example: "Celebs trying to appeal to an increasingly [...] public",
+            word: "Fickle",
+            tags: ["shiki"]
+        },
     ]
 
 

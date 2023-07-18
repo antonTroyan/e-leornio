@@ -15,6 +15,10 @@ import {
 
 export default function Game() {
 
+    const DEFAULT_COMPLEXITY = 50;
+    const INCREMENT_COMPLEXITY_STEP = 15;
+    const DECREMENT_COMPLEXITY_STEP = 5;
+
     const [currentData, setCurrentData] = useState({
         correct: {
             meaning: "",
@@ -26,12 +30,16 @@ export default function Game() {
         ]
     });
 
+    const [allDataArray, setAllDataArray] = useState([])
+
     const [generalCounter, setGeneralCounter] = useState(0)
     const [correctCounter, setCorrectCounter] = useState(0)
     const [percentCounter, setPercentCounter] = useState(0)
 
     useEffect(() => {
-        initData(Data); //called once, on init
+        const dataWithComplexity = Data.map(e => ({...e, complexity: DEFAULT_COMPLEXITY}))
+        setAllDataArray(dataWithComplexity) //fill local data
+        initData(dataWithComplexity) //called once, on init
     }, []);
 
     const { toast } = useToast()
@@ -41,28 +49,34 @@ export default function Game() {
     }
 
     const initData = (array: Array<entity>) => {
-        const randomCorrect: entity = getRandom(array)
-        const randomWrongResult: string[] = []
 
+        const shuffledArray = array.sort(() => Math.random() - 0.5)
+        const sorted = array.sort((e1, e2) => e1.complexity < e2.complexity)
+        const mainWord: entity = sorted[0]
+
+        const randomWrongResult: string[] = []
         let wrongElementsCounter: number = 0
         while (wrongElementsCounter < 2) {
             let randomWrong: entity = getRandom(array)
-            if (randomWrong !== randomCorrect && !randomWrongResult.some(e => e === randomWrong.word)) {
-                randomWrongResult[wrongElementsCounter] = randomWrong.word
+            if (randomWrong !== mainWord && !randomWrongResult.some(e => e === randomWrong.word)) {
+                randomWrongResult[wrongElementsCounter] = randomWrong.word //add words only if they were absent
                 wrongElementsCounter++
             }
         }
-        setCurrentData(e => ({ ...e, correct: randomCorrect, wrong: randomWrongResult }))
+        setCurrentData(e => ({ ...e, correct: mainWord, wrong: randomWrongResult }))
     }
 
     const handleNext = (wasCorrect:boolean) => {
-        initData(Data)
         setGeneralCounter(prev => prev + 1)
         if (wasCorrect) {
             setCorrectCounter(prev => prev + 1)
+            allDataArray[0].complexity -= DECREMENT_COMPLEXITY_STEP
+        } else {
+            allDataArray[0].complexity += INCREMENT_COMPLEXITY_STEP
         }
         const percent = correctCounter / generalCounter * 100
         setPercentCounter(Math.ceil(percent))
+        initData(allDataArray)
     }
 
     const createVariants = () => {
@@ -115,7 +129,7 @@ export default function Game() {
             <main className="flex min-h-screen flex-col items-center justify-between pt-16">
                 <div>
                     <div className="space-y-1">
-                        <h4 className="text-2xl font-medium leading-none">{currentData.correct.meaning}</h4>
+                        <h4 className="text-2xl font-medium leading-none">{currentData.correct.meaning} : {currentData.correct.complexity}</h4>
                         <p className="text-2xl text-muted-foreground">
                             {currentData.correct.example}
                         </p>
