@@ -30,7 +30,7 @@ export default function Game() {
         ]
     });
 
-    const [allDataArray, setAllDataArray] = useState(Array<entity>)
+    const [allDataArray, setAllDataArray] = useState([])
     const [currentCorrectIndex, setCurrentCorrectIndex] = useState(0)
 
     const [generalCounter, setGeneralCounter] = useState(0)
@@ -38,7 +38,7 @@ export default function Game() {
     const [percentCounter, setPercentCounter] = useState(0)
 
     useEffect(() => {
-        const dataWithComplexity:Array<entity> = Data.map(e => ({...e, complexity: DEFAULT_COMPLEXITY}))
+        const dataWithComplexity = Data.map(e => ({...e, complexity: DEFAULT_COMPLEXITY}))
         setAllDataArray(dataWithComplexity) //fill local data
         initData(dataWithComplexity) //called once, on init
     }, []);
@@ -51,18 +51,12 @@ export default function Game() {
 
     const initData = (array: Array<entity>) => {
         const shuffledArray = array.sort(() => Math.random() - 0.5)
-        const sorted = array.sort((e1, e2) => {
-            if (e1.complexity !== undefined && e2.complexity !== undefined)
-                return e1?.complexity - e2?.complexity
-            else
-                return 0
-        })
+        const sorted = array.sort((e1, e2) => e1.complexity < e2.complexity)
 
         let index: number = 0
         let shouldContinue: boolean = true
         while (index <= array.length && shouldContinue) {
-            let complexity = sorted[index]?.complexity ?? DEFAULT_COMPLEXITY
-            if ((Math.random() * 100) < complexity) {
+            if ((Math.random() * 100) < sorted[index].complexity) { //if random less that complexity => take it. Or try take another
                 shouldContinue = false
             } else {
                 index++
@@ -85,12 +79,11 @@ export default function Game() {
 
     const handleNext = (wasCorrect:boolean) => {
         setGeneralCounter(prev => prev + 1)
-        let complexity = allDataArray[currentCorrectIndex].complexity ?? DEFAULT_COMPLEXITY
         if (wasCorrect) {
             setCorrectCounter(prev => prev + 1)
-            complexity -= DECREMENT_COMPLEXITY_STEP
+            allDataArray[currentCorrectIndex].complexity -= DECREMENT_COMPLEXITY_STEP
         } else {
-            complexity += INCREMENT_COMPLEXITY_STEP
+            allDataArray[currentCorrectIndex].complexity += INCREMENT_COMPLEXITY_STEP
         }
         const percent = correctCounter / generalCounter * 100
         setPercentCounter(Math.ceil(percent))
@@ -147,7 +140,7 @@ export default function Game() {
             <main className="flex min-h-screen flex-col items-center justify-between pt-16">
                 <div>
                     <div className="space-y-1">
-                        <h4 className="text-2xl font-medium leading-none">{currentData.correct.meaning}</h4>
+                        <h4 className="text-2xl font-medium leading-none">{currentData.correct.meaning} : {currentData.correct.complexity}</h4>
                         <p className="text-2xl text-muted-foreground">
                             {currentData.correct.example}
                         </p>
