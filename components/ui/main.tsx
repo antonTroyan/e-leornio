@@ -15,8 +15,8 @@ import {
 
 export default function Game() {
 
-    const DEFAULT_COMPLEXITY = 50;
-    const INCREMENT_COMPLEXITY_STEP = 15;
+    const DEFAULT_COMPLEXITY = 40;
+    const INCREMENT_COMPLEXITY_STEP = 5;
     const DECREMENT_COMPLEXITY_STEP = 5;
 
     const [currentData, setCurrentData] = useState({
@@ -49,10 +49,19 @@ export default function Game() {
     }
 
     const initData = (array: Array<entity>) => {
-
         const shuffledArray = array.sort(() => Math.random() - 0.5)
         const sorted = array.sort((e1, e2) => e1.complexity < e2.complexity)
-        const mainWord: entity = sorted[0]
+
+        let index: number = 0
+        let shouldContinue: boolean = true
+        while (index <= array.length && shouldContinue) {
+            if ((Math.random() * 100) < sorted[index].complexity) { //if random less that complexity => take it. Or try take another
+                shouldContinue = false
+            } else {
+                index++
+            }
+        }
+        const mainWord: entity = sorted[index]
 
         const randomWrongResult: string[] = []
         let wrongElementsCounter: number = 0
