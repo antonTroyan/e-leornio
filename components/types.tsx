@@ -4,5 +4,5 @@ export type entity = {
     example: string,
     word: string
     tags: string[]
-    complexity: number
+    complexity?: number
 }
