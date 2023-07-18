@@ -31,6 +31,7 @@ export default function Game() {
     });
 
     const [allDataArray, setAllDataArray] = useState([])
+    const [currentCorrectIndex, setCurrentCorrectIndex] = useState(0)
 
     const [generalCounter, setGeneralCounter] = useState(0)
     const [correctCounter, setCorrectCounter] = useState(0)
@@ -62,6 +63,7 @@ export default function Game() {
             }
         }
         const mainWord: entity = sorted[index]
+        setCurrentCorrectIndex(index)
 
         const randomWrongResult: string[] = []
         let wrongElementsCounter: number = 0
@@ -79,9 +81,9 @@ export default function Game() {
         setGeneralCounter(prev => prev + 1)
         if (wasCorrect) {
             setCorrectCounter(prev => prev + 1)
-            allDataArray[0].complexity -= DECREMENT_COMPLEXITY_STEP
+            allDataArray[currentCorrectIndex].complexity -= DECREMENT_COMPLEXITY_STEP
         } else {
-            allDataArray[0].complexity += INCREMENT_COMPLEXITY_STEP
+            allDataArray[currentCorrectIndex].complexity += INCREMENT_COMPLEXITY_STEP
         }
         const percent = correctCounter / generalCounter * 100
         setPercentCounter(Math.ceil(percent))
