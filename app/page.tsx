@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Separator } from "@/components/ui/separator"
-import Game from '@/components/ui/main'
+import Game from '@/components/ui/game'
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 

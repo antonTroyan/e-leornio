@@ -141,6 +141,7 @@ const rawData: rawEntity[] =
 const DEFAULT_COMPLEXITY = 40;
 
 const prepareData = (rawData:rawEntity[]) => {
+
     return rawData.map(e => ({...e, complexity: DEFAULT_COMPLEXITY}))
 }
 
