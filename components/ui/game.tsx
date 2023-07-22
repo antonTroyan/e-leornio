@@ -48,13 +48,15 @@ export default function Game() {
     const changeCounters = (wasCorrect:boolean | null) => {
         if (wasCorrect !== null) {
         	const newAllValue = allCounter + 1
-        	const newCorrectValue = correctCounter + 1
-        	const newPercentValue = Math.round(newCorrectValue / newAllValue * 100)
-        	
             setAllCounter(newAllValue)
-            if (wasCorrect)
+            
+            if (wasCorrect) {
+            	const newCorrectValue = correctCounter + 1
                 setCorrectCounter(newCorrectValue)
-            setCorrectPercentCounter(newPercentValue)
+                setCorrectPercentCounter(()=> Math.round(newCorrectValue / newAllValue * 100))
+            } else {
+            	setCorrectPercentCounter(()=> Math.round(correctCounter / newAllValue * 100))
+            }   
         }
     }
 
