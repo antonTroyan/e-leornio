@@ -34,7 +34,7 @@ export default function Game() {
     });
 
     useEffect(() => {
-        onNext(null)                                       // called once
+        onNext(null)
     }, []);
 
     const getRandom = (array: Array<entity>): entity => {
@@ -42,47 +42,14 @@ export default function Game() {
     }
 
     const onNext = (wasCorrect:boolean | null) => {
-        let currentArray: Array<entity>
-        const wrongWords: string[] = []
-        let readyAnswers: string[] = []
+        let currentArray: Array<entity> = prepareArray();      
+        changeComplexity(wasCorrect, currentArray);
 
-        // fill array
-        if (currentData.allDataArray.length <= 1)
-            currentArray = Data                                 // get initial array
-        else
-            currentArray = currentData.allDataArray             // reuse array
-        
-        // change complexity of selected word
-        if (wasCorrect !== null) {  // if new do nothing
-            currentArray.map(e => {
-                if (e.word === currentData.correct.word) {
-                    return wasCorrect ? e.complexity-- : e.complexity++ 
-                }
-            })
-        }
-        currentArray.sort(() => Math.random() - 0.5)                 // shuffle             
-        currentArray.sort((e1, e2) => e2.complexity - e1.complexity) // sort by complexity
-        console.log(currentArray)
-
-        // fill correct    
         const correct = currentArray
-            .find(e => (Math.random() * 100) < e.complexity)    // get random by complexity
+            .find(e => (Math.random() * 100) < e.complexity) 
 
-        // fill wrong
-        let numberWrongVariant = 3
-        while (numberWrongVariant > 0) {
-            const randomWrong = getRandom(currentArray)
-            if (randomWrong !== correct
-                && !wrongWords.includes(randomWrong.word)) {
-
-                wrongWords.push(randomWrong.word)
-                numberWrongVariant--
-            }
-        }
-
-        readyAnswers.push(correct !== undefined ? correct.word : "no data")
-        readyAnswers.push(...wrongWords)
-        readyAnswers.sort(() => Math.random() - 0.5)
+        const wrongWords: string[] = prepareWrongWords(currentArray, correct);
+        const readyAnswers: string[] = prepareReadyAnswers(correct, wrongWords);
 
         setCurrentData({
             correct: {
@@ -116,6 +83,51 @@ export default function Game() {
                 </>
             )
         })
+    }
+
+    function prepareArray() {
+        let currentArray: Array<entity>;
+        if (currentData.allDataArray.length <= 1)
+            currentArray = Data; // get initial array
+        else
+            currentArray = currentData.allDataArray; // reuse array
+        return currentArray;
+    }
+
+    function prepareReadyAnswers(correct: entity | undefined, wrongWords: string[]) {
+        let readyAnswers: string[] = [];
+        readyAnswers.push(correct !== undefined ? correct.word : "no data");
+        readyAnswers.push(...wrongWords);
+        readyAnswers.sort(() => Math.random() - 0.5);
+        return readyAnswers;
+    }
+
+    function prepareWrongWords(currentArray: entity[], correct: entity | undefined) {
+        const result: string[] = []
+        let numberWrongVariant = 3;
+        while (numberWrongVariant > 0) {
+            const randomWrong = getRandom(currentArray);
+            if (randomWrong !== correct
+                && !result.includes(randomWrong.word)) {
+
+                result.push(randomWrong.word);
+                numberWrongVariant--;
+            }
+        }
+        return result
+    }
+
+    function changeComplexity(wasCorrect: boolean | null, currentArray: entity[]) {
+        if (wasCorrect !== null) { // if new do nothing
+            currentArray.map(e => {
+                if (e.word === currentData.correct.word) {
+                    return wasCorrect ? e.complexity-- : e.complexity++;
+                }
+            });
+        }
+        currentArray.sort(() => Math.random() - 0.5); // shuffle             
+        currentArray.sort((e1, e2) => e2.complexity - e1.complexity); // sort by complexity
+        console.log(currentArray);
     }
 
     return (
