@@ -51,10 +51,10 @@ export default function Game() {
         	const newCorrectValue = correctCounter + 1
         	const newPercentValue = Math.round(correctCounter / newAllValue * 100)
         	
-            setAllCounter(() => newAllValue)
+            setAllCounter(newAllValue)
             if (wasCorrect)
-                setCorrectCounter(() => newCorrectValue)
-            setCorrectPercentCounter(() => newPercentValue)
+                setCorrectCounter(newCorrectValue)
+            setCorrectPercentCounter(newPercentValue)
         }
     }
 
