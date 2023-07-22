@@ -135,48 +135,7 @@ const rawData: rawEntity[] =
             word: "Fickle",
             tags: ["shiki"]
         },
-        {
-            meaning: "",
-            example: "",
-            word: "Barren",
-            tags: [""]
-        },
-        {
-            meaning: "",
-            example: "",
-            word: "Trod",
-            tags: [""]
-        },
-        {
-            meaning: "",
-            example: "",
-            word: "",
-            tags: [""]
-        },
-        {
-            meaning: "",
-            example: "",
-            word: "",
-            tags: [""]
-        },
-        {
-            meaning: "",
-            example: "",
-            word: "",
-            tags: [""]
-        },
-        {
-            meaning: "",
-            example: "",
-            word: "",
-            tags: [""]
-        },
-        {
-            meaning: "",
-            example: "",
-            word: "",
-            tags: [""]
-        },                                                
+                               
     ]
 
 
