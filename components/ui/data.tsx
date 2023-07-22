@@ -135,7 +135,30 @@ const rawData: rawEntity[] =
             word: "Fickle",
             tags: ["shiki"]
         },
-                               
+        {
+            meaning: "(of land) too poor to produce much or any vegetation",
+            example: "The plains of Kyrenia were [...]",
+            word: "Barren",
+            tags: ["shiki"]
+        },
+        {
+            meaning: "Walk in a specified way",
+            example: "Rosa [...] as lightly as she could",
+            word: "Trod",
+            tags: ["shiki"]
+        },
+        {
+            meaning: "Have a harmonious or friendly relationship",
+            example: "They seem to [...] pretty well",
+            word: "Get along",
+            tags: ["shiki"]
+        },
+        {
+            meaning: "Cause to feel sudden shock or alarm",
+            example: "A sudden sound in the doorway [...] her",
+            word: "Startle",
+            tags: ["shiki"]
+        },                                      
     ]
 
 
