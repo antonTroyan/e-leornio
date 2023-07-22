@@ -23,6 +23,7 @@ export default function Game() {
             word: ""
         },
         wrong: ["", ""],
+        readyAnswers: ["", ""],
         allDataArray: [{
             meaning: "",
             example: "",
@@ -43,6 +44,7 @@ export default function Game() {
     const onNext = (wasCorrect:boolean | null) => {
         let currentArray: Array<entity>
         const wrongWords: string[] = []
+        let readyAnswers: string[] = []
 
         // fill array
         if (currentData.allDataArray.length <= 1)
@@ -78,6 +80,10 @@ export default function Game() {
             }
         }
 
+        readyAnswers.push(correct !== undefined ? correct.word : "no data")
+        readyAnswers.push(...wrongWords)
+        readyAnswers.sort(() => Math.random() - 0.5)
+
         setCurrentData({
             correct: {
                 meaning: correct !== undefined ? correct.meaning : "no data",
@@ -85,16 +91,13 @@ export default function Game() {
                 word: correct !== undefined ? correct.word : "no data"
             },
             wrong: wrongWords,
+            readyAnswers: readyAnswers,
             allDataArray: currentArray
         })
     }
 
     const createVariants = () => {
-        const allVariants: string[] = currentData.wrong
-        allVariants.push(currentData.correct.word)
-        allVariants.sort(() => Math.random() - 0.5) 
-
-        return allVariants.map(element => {
+        return currentData.readyAnswers.map(element => {
             return (
                 <>
                     <div key={element} onClick={() => {
