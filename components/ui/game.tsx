@@ -33,6 +33,10 @@ export default function Game() {
         }]
     });
 
+    const [allCounter, setAllCounter] = useState(0)
+    const [correctCounter, setCorrectCounter] = useState(0)
+    const [correctPercentCounter, setCorrectPercentCounter] = useState(0)
+
     useEffect(() => {
         onNext(null)
     }, []);
@@ -41,15 +45,25 @@ export default function Game() {
         return array[Math.floor(Math.random() * array.length)]
     }
 
+    const changeCounters = (wasCorrect:boolean | null) => {
+        if (wasCorrect !== null) {
+            setAllCounter(() => allCounter + 1)
+            if (wasCorrect)
+                setCorrectCounter(() => correctCounter + 1)
+            setCorrectPercentCounter(() => Math.round(correctCounter / allCounter * 100))
+        }
+    }
+
     const onNext = (wasCorrect:boolean | null) => {
-        let currentArray: Array<entity> = prepareArray();      
-        changeComplexityIfNeed(wasCorrect, currentArray);
+        let currentArray: Array<entity> = prepareArray()     
+        changeComplexityIfNeed(wasCorrect, currentArray)
+        changeCounters(wasCorrect)
 
         const correct = currentArray
             .find(e => (Math.random() * 100) < e.complexity) 
 
-        const wrongWords: string[] = prepareWrongWords(currentArray, correct);
-        const readyAnswers: string[] = prepareReadyAnswers(correct, wrongWords);
+        const wrongWords: string[] = prepareWrongWords(currentArray, correct)
+        const readyAnswers: string[] = prepareReadyAnswers(correct, wrongWords)
 
         setCurrentData({
             correct: {
@@ -143,9 +157,9 @@ export default function Game() {
                     </TableHeader>
                     <TableBody>
                         <TableRow>
-                            <TableCell className="text-center">0</TableCell>
-                            <TableCell className="text-center">0</TableCell>
-                            <TableCell className="text-center">0</TableCell>
+                            <TableCell className="text-center">{allCounter}</TableCell>
+                            <TableCell className="text-center">{correctCounter}</TableCell>
+                            <TableCell className="text-center">{correctPercentCounter}</TableCell>
                         </TableRow>
                     </TableBody>
                 </Table>
