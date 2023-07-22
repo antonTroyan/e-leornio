@@ -43,7 +43,7 @@ export default function Game() {
 
     const onNext = (wasCorrect:boolean | null) => {
         let currentArray: Array<entity> = prepareArray();      
-        changeComplexity(wasCorrect, currentArray);
+        changeComplexityIfNeed(wasCorrect, currentArray);
 
         const correct = currentArray
             .find(e => (Math.random() * 100) < e.complexity) 
@@ -88,7 +88,7 @@ export default function Game() {
     function prepareArray() {
         let currentArray: Array<entity>;
         if (currentData.allDataArray.length <= 1)
-            currentArray = Data; // get initial array
+            currentArray = Data;                     // init array
         else
             currentArray = currentData.allDataArray; // reuse array
         return currentArray;
@@ -117,7 +117,7 @@ export default function Game() {
         return result
     }
 
-    function changeComplexity(wasCorrect: boolean | null, currentArray: entity[]) {
+    function changeComplexityIfNeed(wasCorrect: boolean | null, currentArray: entity[]) {
         if (wasCorrect !== null) { // if new do nothing
             currentArray.map(e => {
                 if (e.word === currentData.correct.word) {
@@ -126,7 +126,7 @@ export default function Game() {
             });
         }
         currentArray.sort(() => Math.random() - 0.5); // shuffle             
-        currentArray.sort((e1, e2) => e2.complexity - e1.complexity); // sort by complexity
+        currentArray.sort((e1, e2) => e2.complexity - e1.complexity);
         console.log(currentArray);
     }
 
