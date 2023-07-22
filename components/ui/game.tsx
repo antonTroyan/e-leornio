@@ -33,15 +33,14 @@ export default function Game() {
     });
 
     useEffect(() => {
-        onNext(null, null)                                       // called once
+        onNext(null)                                       // called once
     }, []);
 
     const getRandom = (array: Array<entity>): entity => {
         return array[Math.floor(Math.random() * array.length)]
     }
 
-    const onNext = (selectedElement:string | null, wasCorrect:boolean | null) => {
-        debugger
+    const onNext = (wasCorrect:boolean | null) => {
         let currentArray: Array<entity>
         const wrongWords: string[] = []
 
@@ -50,22 +49,21 @@ export default function Game() {
             currentArray = Data                                 // get initial array
         else
             currentArray = currentData.allDataArray             // reuse array
-
+        
         // change complexity of selected word
-        if (selectedElement !== null && wasCorrect !== null) {  // if new do nothing
+        if (wasCorrect !== null) {  // if new do nothing
             currentArray.map(e => {
-                if (e.word === selectedElement) {
-                    return wasCorrect                             
-                        ? e.complexity-- 
-                        : e.complexity++ 
+                if (e.word === currentData.correct.word) {
+                    return wasCorrect ? e.complexity-- : e.complexity++ 
                 }
             })
         }
-        
+        currentArray.sort(() => Math.random() - 0.5)                 // shuffle             
+        currentArray.sort((e1, e2) => e2.complexity - e1.complexity) // sort by complexity
+        console.log(currentArray)
+
         // fill correct    
         const correct = currentArray
-            .sort(() => Math.random() - 0.5)                    // shuffle
-            .sort((e1, e2) => e2.complexity - e1.complexity)    // sort by complexity
             .find(e => (Math.random() * 100) < e.complexity)    // get random by complexity
 
         // fill wrong
@@ -94,6 +92,7 @@ export default function Game() {
     const createVariants = () => {
         const allVariants: string[] = currentData.wrong
         allVariants.push(currentData.correct.word)
+        allVariants.sort(() => Math.random() - 0.5) 
 
         return allVariants.map(element => {
             return (
@@ -107,7 +106,7 @@ export default function Game() {
                                 description: currentData.correct.word,
                             })
                         }
-                        onNext(element, wasCorrect)
+                        onNext(wasCorrect)
                     }}>{element}
                     </div>
                     <Separator orientation="vertical" />
