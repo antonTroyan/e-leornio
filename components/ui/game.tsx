@@ -49,7 +49,7 @@ export default function Game() {
         if (wasCorrect !== null) {
         	const newAllValue = allCounter + 1
         	const newCorrectValue = correctCounter + 1
-        	const newPercentValue = Math.round(correctCounter / newAllValue * 100)
+        	const newPercentValue = Math.round(newCorrectValue / newAllValue * 100)
         	
             setAllCounter(newAllValue)
             if (wasCorrect)
