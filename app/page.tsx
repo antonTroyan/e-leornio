@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import { Separator } from "@/components/ui/separator"
+import { Separator } from "@/components/ui/libs/separator"
 import Game from '@/components/ui/game'
 import { ThemeProvider } from "@/components/theme-provider"
-import { Toaster } from "@/components/ui/toaster"
+import { Toaster } from "@/components/ui/libs/toaster"
 
 export default function Home() {
   return (

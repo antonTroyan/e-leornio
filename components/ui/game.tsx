@@ -1,6 +1,6 @@
 "use client"
-import { Separator } from "@/components/ui/separator"
-import { useToast } from "@/components/ui/use-toast"
+import { Separator } from "@/components/ui/libs/separator"
+import { useToast } from "@/components/ui/libs/use-toast"
 import React, { useState, useEffect } from 'react';
 import Data from './data';
 import { entity } from '../types';
@@ -11,7 +11,7 @@ import {
     TableHead,
     TableHeader,
     TableRow,
-} from "@/components/ui/table"
+} from "@/components/ui/libs/table"
 
 export default function Game() {
     const { toast } = useToast()
