@@ -158,8 +158,68 @@ const rawData: rawEntity[] =
             example: "A sudden sound in the doorway [...] her",
             word: "Startle",
             tags: ["shiki"]
-        },                                      
-    ]
+        },
+        {
+            meaning: "The action of getting rid of a troublesome or unwanted person or thing",
+            example: "The new movement emphasized discipline, not [...] or punishment as a method of solving the criminal problem",
+            word: "Riddance",
+            tags: ["weird_al_yankovic"]
+        },
+        {
+            meaning: "(of two people) meet or form a relationship; link someone or something to an object",
+            example: "He [...] with a friend in Budapest",
+            word: "Hook up",
+            tags: ["weird_al_yankovic"]
+        },
+        {
+            meaning: "The technical skill of a jazz or rock musician; a person's or animal's mouth or jaws",
+            example: "When I'm on tour my [...] go down",
+            word: "Сhops",
+            tags: ["weird_al_yankovic"]
+        },
+        {
+            meaning: "Saliva falling from the mouth",
+            example: "A fine trickle of [...] leaked from the corner of his mouth",
+            word: "Drool",
+            tags: ["weird_al_yankovic"]
+        },
+        {
+            meaning: "A small flow of liquid",
+            example: "A [...] of blood",
+            word: "Trickle",
+            tags: ["weird_al_yankovic"]
+        },
+        {
+            meaning: "Heavy-duty waterproof cloth, originally of tarred canvas",
+            example: "A stretch of roof is covered with [...]",
+            word: "Tarpaulin",
+            tags: ["weird_al_yankovic"]
+        },
+        {
+            meaning: "A firm rejection or dismissal",
+            example: "I am concerned that audiences might give the film a [...]",
+            word: "Hard pass",
+            tags: ["weird_al_yankovic"]
+        },
+        {
+            meaning: "A light blow or a jolting collision",
+            example: "A nasty [...] on the head",
+            word: "Bump",
+            tags: ["weird_al_yankovic"]
+        },
+        {
+            meaning: "Push or shake (someone or something) abruptly and roughly",
+            example: "A surge in the crowd behind him [...] him forwards",
+            word: "Jolt",
+            tags: ["weird_al_yankovic"]
+        },
+        {
+            meaning: "Pieces of grain husk separated from flour after milling",
+            example: "Oat [...]",
+            word: "Bran",
+            tags: ["weird_al_yankovic"]
+        },
+]
 
 
 const DEFAULT_COMPLEXITY = 40;
