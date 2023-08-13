@@ -11,7 +11,7 @@ export default function Home() {
         <head />
         <body>
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-            <main className="flex min-h-screen flex-col items-center justify-between pt-52">
+            <main className="flex min-h-screen flex-col items-center justify-between">
               <Game />
               <Toaster />
             </main>

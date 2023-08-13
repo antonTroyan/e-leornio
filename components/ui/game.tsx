@@ -179,7 +179,7 @@ export default function Game() {
                     </TableBody>
                 </Table>
             </div>
-            <main className="flex min-h-screen flex-col items-center justify-between pt-16">
+            <main className="pt-80">
                 <div>
                     <div className="space-y-1">
                         {createTags()}
