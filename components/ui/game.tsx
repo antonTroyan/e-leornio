@@ -6,7 +6,7 @@ import Data from './data';
 import { entity, currentDataType } from '../types';
 
 import { Badge } from "@/components/ui/badge"
-import Score from "../score";
+import Score from "./score";
 
 export default function Game() {
     const { toast } = useToast()
