@@ -179,8 +179,8 @@ export default function Game() {
                     </TableBody>
                 </Table>
             </div>
-            <main className="pt-80">
-                <div>
+            <main className="flex h-screen">
+                <div className="m-auto">
                     <div className="space-y-1">
                         {createTags()}
                         <h4 className="text-2xl font-medium leading-none">{currentData.correct.meaning} </h4>
