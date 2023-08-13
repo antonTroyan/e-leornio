@@ -12,6 +12,7 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/libs/table"
+import { Badge } from "@/components/ui/badge"
 
 export default function Game() {
     const { toast } = useToast()
@@ -20,7 +21,8 @@ export default function Game() {
         correct: {
             meaning: "",
             example: "",
-            word: ""
+            word: "",
+            tags: ["", ""]
         },
         wrong: ["", ""],
         readyAnswers: ["", ""],
@@ -75,7 +77,8 @@ export default function Game() {
             correct: {
                 meaning: correct !== undefined ? correct.meaning : "no data",
                 example: correct !== undefined ? correct.example : "no data",
-                word: correct !== undefined ? correct.word : "no data"
+                word: correct !== undefined ? correct.word : "no data",
+                tags: correct !== undefined ? correct.tags : ["no data"]
             },
             wrong: wrongWords,
             readyAnswers: readyAnswers,
@@ -150,6 +153,12 @@ export default function Game() {
         console.log(currentArray);
     }
 
+    const createTags = () => {
+        return currentData.correct.tags.map(element => {
+            return <Badge id={element}>{element}</Badge>
+        })
+    }
+
     return (
         <>
             <div className="absolute left-0 top-0  ...">
@@ -173,6 +182,7 @@ export default function Game() {
             <main className="flex min-h-screen flex-col items-center justify-between pt-16">
                 <div>
                     <div className="space-y-1">
+                        {createTags()}
                         <h4 className="text-2xl font-medium leading-none">{currentData.correct.meaning} </h4>
                         <p className="text-2xl text-muted-foreground">
                             {currentData.correct.example}
