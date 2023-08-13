@@ -108,7 +108,7 @@ export default function Game() {
         })
     }
 
-    function prepareArray() {
+    const prepareArray = () => {
         let currentArray: Array<entity>;
         if (currentData.allDataArray.length <= 1)
             currentArray = Data;                     // init array
@@ -117,7 +117,7 @@ export default function Game() {
         return currentArray;
     }
 
-    function prepareReadyAnswers(correct: entity | undefined, wrongWords: string[]) {
+    const prepareReadyAnswers = (correct: entity | undefined, wrongWords: string[]) => {
         let readyAnswers: string[] = [];
         readyAnswers.push(correct !== undefined ? correct.word : "no data");
         readyAnswers.push(...wrongWords);
@@ -125,7 +125,7 @@ export default function Game() {
         return readyAnswers;
     }
 
-    function prepareWrongWords(currentArray: entity[], correct: entity | undefined) {
+    const prepareWrongWords = (currentArray: entity[], correct: entity | undefined) => {
         const result: string[] = []
         let numberWrongVariant = 3;
         while (numberWrongVariant > 0) {
@@ -140,7 +140,7 @@ export default function Game() {
         return result
     }
 
-    function changeComplexityIfNeed(wasCorrect: boolean | null, currentArray: entity[]) {
+    const changeComplexityIfNeed = (wasCorrect: boolean | null, currentArray: entity[]) => {
         if (wasCorrect !== null) { // if new do nothing
             currentArray.map(e => {
                 if (e.word === currentData.correct.word) {
