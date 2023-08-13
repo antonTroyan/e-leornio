@@ -155,7 +155,7 @@ export default function Game() {
 
     const createTags = () => {
         return currentData.correct.tags.map(element => {
-            return <Badge id={element}>#{element}</Badge>
+            return <Badge key={element}>#{element}</Badge>
         })
     }
 
