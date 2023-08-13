@@ -4,8 +4,7 @@ import { useToast } from "@/components/ui/libs/use-toast"
 import React, { useState, useEffect } from 'react';
 import Data from './data';
 import { entity, currentDataType } from '../types';
-
-import { Badge } from "@/components/ui/badge"
+import { Badge } from "@/components/ui/libs/badge"
 import Score from "./score";
 
 export default function Game() {
