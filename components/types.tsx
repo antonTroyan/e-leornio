@@ -14,12 +14,14 @@ export type rawEntity = {
     tags: string[]
 }
 
-// export type currentData = {
-//     correct: {
-//         meaning: string,
-//         example: string,
-//         word: string
-//     },
-//     wrong: string,
-//     allDataArray: Array<entity>
-// }
+export type currentDataType = {
+    correct: {
+        meaning: string,
+        example: string,
+        word: string,
+        tags: string[]
+    },
+    wrong: string[],
+    readyAnswers: string[],
+    allDataArray: Array<entity>,
+   }

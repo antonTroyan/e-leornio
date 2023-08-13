@@ -3,37 +3,35 @@ import { Separator } from "@/components/ui/libs/separator"
 import { useToast } from "@/components/ui/libs/use-toast"
 import React, { useState, useEffect } from 'react';
 import Data from './data';
-import { entity } from '../types';
-import {
-    Table,
-    TableBody,
-    TableCell,
-    TableHead,
-    TableHeader,
-    TableRow,
-} from "@/components/ui/libs/table"
+import { entity, currentDataType } from '../types';
+
 import { Badge } from "@/components/ui/badge"
+import Score from "../score";
 
 export default function Game() {
     const { toast } = useToast()
 
-    const [currentData, setCurrentData] = useState({
-        correct: {
-            meaning: "",
-            example: "",
-            word: "",
-            tags: ["", ""]
-        },
-        wrong: ["", ""],
-        readyAnswers: ["", ""],
-        allDataArray: [{
-            meaning: "",
-            example: "",
-            word: "",
-            tags: [""],
-            complexity: 0
-        }]
-    });
+    const initCurrentData = (): currentDataType => {
+        return {
+            correct: {
+                meaning: "",
+                example: "",
+                word: "",
+                tags: ["", ""]
+            },
+            wrong: ["", ""],
+            readyAnswers: ["", ""],
+            allDataArray: [{
+                meaning: "",
+                example: "",
+                word: "",
+                tags: [""],
+                complexity: 0
+            }]
+        };
+    }
+
+    const [currentData, setCurrentData] = useState(initCurrentData());
 
     const [allCounter, setAllCounter] = useState(0)
     const [correctCounter, setCorrectCounter] = useState(0)
@@ -47,28 +45,28 @@ export default function Game() {
         return array[Math.floor(Math.random() * array.length)]
     }
 
-    const changeCounters = (wasCorrect:boolean | null) => {
+    const changeCounters = (wasCorrect: boolean | null) => {
         if (wasCorrect !== null) {
-        	const newAllValue = allCounter + 1
+            const newAllValue = allCounter + 1
             setAllCounter(newAllValue)
-            
+
             if (wasCorrect) {
-            	const newCorrectValue = correctCounter + 1
+                const newCorrectValue = correctCounter + 1
                 setCorrectCounter(newCorrectValue)
-                setCorrectPercentCounter(()=> Math.round(newCorrectValue / newAllValue * 100))
+                setCorrectPercentCounter(() => Math.round(newCorrectValue / newAllValue * 100))
             } else {
-            	setCorrectPercentCounter(()=> Math.round(correctCounter / newAllValue * 100))
-            }   
+                setCorrectPercentCounter(() => Math.round(correctCounter / newAllValue * 100))
+            }
         }
     }
 
-    const onNext = (wasCorrect:boolean | null) => {
-        let currentArray: Array<entity> = prepareArray()     
+    const onNext = (wasCorrect: boolean | null) => {
+        let currentArray: Array<entity> = prepareArray()
         changeComplexityIfNeed(wasCorrect, currentArray)
         changeCounters(wasCorrect)
 
         const correct = currentArray
-            .find(e => (Math.random() * 100) < e.complexity) 
+            .find(e => (Math.random() * 100) < e.complexity)
 
         const wrongWords: string[] = prepareWrongWords(currentArray, correct)
         const readyAnswers: string[] = prepareReadyAnswers(correct, wrongWords)
@@ -154,33 +152,17 @@ export default function Game() {
     }
 
     const createTags = () => {
-        return currentData.correct.tags.map(element => {
+        return currentData.correct.tags.map((element: string) => {
             if (element !== "") {
                 return <Badge key={element}>#{element}</Badge>
             }
         })
     }
 
+
     return (
         <>
-            <div className="absolute left-0 top-0  ...">
-                <Table>
-                    <TableHeader>
-                        <TableRow>
-                            <TableHead className="text-center">All</TableHead>
-                            <TableHead className="text-center">Correct №</TableHead>
-                            <TableHead className="text-center">Correct %</TableHead>
-                        </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                        <TableRow>
-                            <TableCell className="text-center">{allCounter}</TableCell>
-                            <TableCell className="text-center">{correctCounter}</TableCell>
-                            <TableCell className="text-center">{correctPercentCounter}</TableCell>
-                        </TableRow>
-                    </TableBody>
-                </Table>
-            </div>
+            <Score allCounter={allCounter} correctCounter={correctCounter} correctPercentCounter={correctPercentCounter}/>
             <main className="flex h-screen">
                 <div className="m-auto">
                     <div className="space-y-1">
@@ -198,4 +180,7 @@ export default function Game() {
             </main>
         </>
     )
+
 }
+
+
