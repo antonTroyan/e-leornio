@@ -219,6 +219,66 @@ const rawData: rawEntity[] =
             word: "Bran",
             tags: ["weird_al_yankovic"]
         },
+        {
+            meaning: "Lose or be deprived of (property or a right or privilege) as a penalty for wrongdoing",
+            example: "Those unable to meet their taxes were liable to [...] their estates",
+            word: "Forfeit",
+            tags: ["jujutsu_kaisen"]
+        },
+        {
+            meaning: "Leave (a place that one previously occupied)",
+            example: "Rooms must be [...] by noon on the last day of your holiday",
+            word: "Vacate",
+            tags: ["jujutsu_kaisen"]
+        },
+        {
+            meaning: "Lose sleep over something; exp. worry about something;",
+            example: "Quite [...] everything",
+            word: "Snap over",
+            tags: ["jujutsu_kaisen"]
+        },
+        {
+            meaning: "Not sufficiently strict, severe, or careful",
+            example: "[...] security arrangements at the airport",
+            word: "Lax",
+            tags: ["jujutsu_kaisen"]
+        },
+        {
+            meaning: "To move from one place to another without any particular purpose or energy, because you are unhappy or disappointed",
+            example: "He was driving me crazy, [...] the house all day.",
+            word: "Mope around",
+            tags: ["jujutsu_kaisen"]
+        },
+        {
+            meaning: "To criticize someone harshly",
+            example: "My father gave me a [...] for coming home late",
+            word: "Give someone a roasting",
+            tags: ["jujutsu_kaisen"]
+        },
+        {
+            meaning: "The expression of sorrow for someone's death",
+            example: "She's still in [...] after the death of her husband",
+            word: "Mourning",
+            tags: ["jujutsu_kaisen"]
+        },
+        {
+            meaning: "Severe suffering or privation",
+            example: "Intolerable levels of hardship",
+            word: "Hardship",
+            tags: ["jujutsu_kaisen"]
+        },
+        {
+            meaning: "The quality or power that something or someone has that makes it, him, or her attractive",
+            example: "He could not resist the [...] of great riches.",
+            word: "Lure",
+            tags: ["jujutsu_kaisen"]
+        },
+        {
+            meaning: "A trace of a bad or undesirable substance or quality",
+            example: "The lingering [...] of creosote",
+            word: "Taint",
+            tags: ["jujutsu_kaisen"]
+        },
 ]
 
 
