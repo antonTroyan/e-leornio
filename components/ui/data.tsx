@@ -279,6 +279,24 @@ const rawData: rawEntity[] =
             word: "Taint",
             tags: ["jujutsu_kaisen"]
         },
+        {
+            meaning: "Arrogantly superior and disdainful.",
+            example: "A look of haughty disdain",
+            word: "Haughty",
+            tags: ["jujutsu_kaisen"]
+        },
+        {
+            meaning: "A stake is a wooden stick, sharpened on one end and used to mark property lines (or slay a vampire).",
+            example: "The corner of the lot was indicated by a [...]",
+            word: "Stake",
+            tags: ["hells_paradise"]
+        },
+        {
+            meaning: "The criminal act of deliberately setting fire to property",
+            example: "Police are treating the fire as [...]",
+            word: "Arson",
+            tags: ["hells_paradise"]
+        },
 ]
 
 
