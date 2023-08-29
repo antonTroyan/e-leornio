@@ -1,6 +1,6 @@
 import { entity } from "../types"
 import { rawEntity } from "../types"
-import wordsYml from "words.holder.yml"
+import wordsYml from "./words.holder.yml"
 
 const rawData: rawEntity[] =
     [
