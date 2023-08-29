@@ -7,7 +7,6 @@ import wordsYml from "./words.holder.yml"
 const DEFAULT_COMPLEXITY = 40;
 
 const prepareData = () => {
-
     return Object.keys(wordsYml).map(e => ({
         meaning: wordsYml[e].meaning,
         example: wordsYml[e].example,
@@ -15,7 +14,6 @@ const prepareData = () => {
         tags: wordsYml[e].tags,
         complexity: DEFAULT_COMPLEXITY
     }))
-
 }
 
 const Data = prepareData()
