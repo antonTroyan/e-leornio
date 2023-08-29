@@ -1,25 +1,75 @@
+#Example:
+#  meaning: ...
+#  example: ...
+#  tags:
+#    - ...
 Nub:
   meaning: The crux or central point of a matter
-  example: The [...] of the problem lies elsewhere
+  example: The (...) of the problem lies elsewhere
   tags:
     - brickleberry
 Flint:
    meaning: A hard grey rock consisting of nearly pure silica (chert), occurring chiefly as nodules in chalk
-   example: Houses built of brick and [...]
+   example: Houses built of brick and (...)
    tags:
     - brickleberry
 Den mother:
    meaning: A woman who serves as an adult leader or supervisor of a cub scout den
-   example: The official [...] climbed slowly, carrying a heavy hamper of food
+   example: The official (...) climbed slowly, carrying a heavy hamper of food
    tags:
     - brickleberry
 Shambles:
    meaning: A state of total disorder
-   example: My career was in a [...]
+   example: My career was in a (...)
    tags:
     - brickleberry
 Snuggly:
   meaning: Comfortable, warm, and cosy
-  example: She had to stay in her [...] bed until the last second
+  example: She had to stay in her (...) bed until the last second
   tags:
     - brickleberry
+Condemned:
+  meaning: Sentenced to a particular punishment, especially death
+  example: (...) prisoners awaiting execution
+  tags:
+    - hells_paradise
+Burglary:
+  meaning: Illegal entry of a building with intent to commit a crime, especially theft
+  example: A two-year sentence for (...)
+  tags:
+    - hells_paradise
+Arson:
+  meaning: The criminal act of deliberately setting fire to property
+  example: Police are treating the fire as (...)
+  tags:
+    - hells_paradise
+Heinous:
+  meaning: (of a person or wrongful act, especially a crime) utterly odious or wicked
+  example: A battery of (...) crimes
+  tags:
+    - hells_paradise
+Apprehend:
+  meaning: Arrest (someone) for a crime
+  example: A warrant was issued but he has not been (...)ed
+  tags:
+    - hells_paradise
+Listless:
+  meaning: (of a person or their manner) lacking energy or enthusiasm
+  example: Bouts of (...) depression
+  tags:
+    - hells_paradise
+Bout:
+  meaning: A short period of intense activity of a specified kind
+  example: Occasional (...)s of strenuous exercise
+  tags:
+    - hells_paradise
+Slight:
+  meaning: Small in degree; inconsiderable
+  example: A (...) increase
+  tags:
+    - hells_paradise
+Chaff:
+  meaning: Worthless things; rubbish
+  example: He hopes to separate scientifically supported claims from pseudoscientific (...)
+  tags:
+    - hells_paradise
