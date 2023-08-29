@@ -64,9 +64,11 @@ export default function Game() {
         changeComplexityIfNeed(wasCorrect, currentArray)
         changeCounters(wasCorrect)
 
-        const correct = currentArray
-            .find(e => (Math.random() * 100) < e.complexity)
-
+        let correct
+        while (correct === undefined) {
+            correct = currentArray.find(e => (Math.random() * 100) < e.complexity)
+        }
+        
         const wrongWords: string[] = prepareWrongWords(currentArray, correct)
         const readyAnswers: string[] = prepareReadyAnswers(correct, wrongWords)
 

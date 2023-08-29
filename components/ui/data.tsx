@@ -1,5 +1,6 @@
 import { entity } from "../types"
 import { rawEntity } from "../types"
+import wordsYml from "../../words.holder.yml"
 
 const rawData: rawEntity[] =
     [
@@ -304,7 +305,16 @@ const DEFAULT_COMPLEXITY = 40;
 
 const prepareData = (rawData:rawEntity[]) => {
 
-    return rawData.map(e => ({...e, complexity: DEFAULT_COMPLEXITY}))
+    const result = Object.keys(wordsYml).map(e => ({
+        meaning: wordsYml[e].meaning,
+        example: wordsYml[e].example,
+        word: e,
+        tags: wordsYml[e].tags,
+        complexity: DEFAULT_COMPLEXITY
+    }))
+    return result
+
+    // return rawData.map(e => ({...e, complexity: DEFAULT_COMPLEXITY}))
 }
 
 const Data = prepareData(rawData)
