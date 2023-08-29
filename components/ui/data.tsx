@@ -6,7 +6,7 @@ import wordsYml from "./words.holder.yml"
 
 const DEFAULT_COMPLEXITY = 40;
 
-const prepareData = (rawData:rawEntity[]) => {
+const prepareData = () => {
 
     return Object.keys(wordsYml).map(e => ({
         meaning: wordsYml[e].meaning,
@@ -18,6 +18,6 @@ const prepareData = (rawData:rawEntity[]) => {
 
 }
 
-const Data = prepareData(rawData)
+const Data = prepareData()
 
 export default Data
