@@ -95,7 +95,7 @@ Motion:
     - rick_and_morty
 Heckle:
   meaning: Interrupt (a public speaker) with derisive or aggressive comments or abuse
-  example: He was booed and ()ed when he tried to address the demonstrators
+  example: He was booed and (...)ed when he tried to address the demonstrators
   tags:
     - rick_and_morty
 Clumsily:
@@ -133,8 +133,73 @@ Gross:
   example: He wore an outfit that was absolutely (...)
   tags:
     - rick_and_morty
+Buckle down:
+  meaning: Tackle a task with determination
+  example: The pair (...) and started to train seriously
+  tags:
+    - rick_and_morty
+Roofie:
+  meaning: Describes someone being raped or sexually assaulted after being spiked with drugs
+  example: They warned the girls that a rapist may try to put a “(...)” in their drink.
+  tags:
+    - rick_and_morty
+Rile up:
+  meaning: To make (someone) very excited
+  example: It doesn't take much to get him (...). [=angry]
+  tags:
+    - rick_and_morty
+Decapitated:
+  meaning: (of a person or animal) having had the head cut off
+  example: A (...) body
+  tags:
+    - rick_and_morty
+Run amok:
+  meaning: Behave uncontrollably and disruptively
+  example: The kids are (...)ing (...) around the house
+  tags:
+    - rick_and_morty
+Plummet:
+  meaning: Fall or drop straight down at high speed
+  example: A climber was killed when he (...)ed 300 feet down an icy gully
+  tags:
+    - rick_and_morty
+Crib:
+  meaning: A child's bed with barred or latticed sides; a cot
+  example: Tiptoeing over to the (...), he looked down at the sleeping child
+  tags:
+    - rick_and_morty
+Leverage:
+  meaning: The exertion of force by means of a lever
+  example: My spade hit something solid that wouldn't respond to (...)
+  tags:
+    - rick_and_morty
+Brink:
+  meaning: The extreme edge of land before a steep slope or a body or water
+  example: The [...] of the cliffs
+  tags:
+    - the_fall_of_house_of_usher
+Shrink:
+  meaning: Become or make smaller in size or amount
+  example: The workforce [] to a thousand
+  tags:
+    - the_fall_of_house_of_usher
+Subpoena:
+  meaning: A writ ordering a person to attend a court
+  example: A [...] may be issued to compel their attendance
+  tags:
+    - the_fall_of_house_of_usher
+Hang up:
+  meaning: Hang from a hook
+  example: Your dressing gown's [...]ing [...] behind the door
+  tags:
+    - the_fall_of_house_of_usher
+Confession:
+  meaning: A formal statement admitting that one is guilty of a crime
+  example: He signed a [...] to both the murders
+  tags:
+    - the_fall_of_house_of_usher
 #???:
 #  meaning:
 #  example:
 #  tags:
-#    -
+#    - the_fall_of_house_of_usher
