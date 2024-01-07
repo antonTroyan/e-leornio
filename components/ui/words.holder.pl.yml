@@ -1,0 +1,205 @@
+#Example:
+#  meaning: ...
+#  example: ...
+#  tags:
+#    - ...
+Nub:
+  meaning: The crux or central point of a matter
+  example: The (...) of the problem lies elsewhere
+  tags:
+    - brickleberry
+Flint:
+   meaning: A hard grey rock consisting of nearly pure silica (chert), occurring chiefly as nodules in chalk
+   example: Houses built of brick and (...)
+   tags:
+    - brickleberry
+Den mother:
+   meaning: A woman who serves as an adult leader or supervisor of a cub scout den
+   example: The official (...) climbed slowly, carrying a heavy hamper of food
+   tags:
+    - brickleberry
+Shambles:
+   meaning: A state of total disorder
+   example: My career was in a (...)
+   tags:
+    - brickleberry
+Snuggly:
+  meaning: Comfortable, warm, and cosy
+  example: She had to stay in her (...) bed until the last second
+  tags:
+    - brickleberry
+Condemned:
+  meaning: Sentenced to a particular punishment, especially death
+  example: (...) prisoners awaiting execution
+  tags:
+    - hells_paradise
+Burglary:
+  meaning: Illegal entry of a building with intent to commit a crime, especially theft
+  example: A two-year sentence for (...)
+  tags:
+    - hells_paradise
+Arson:
+  meaning: The criminal act of deliberately setting fire to property
+  example: Police are treating the fire as (...)
+  tags:
+    - hells_paradise
+Heinous:
+  meaning: (of a person or wrongful act, especially a crime) utterly odious or wicked
+  example: A battery of (...) crimes
+  tags:
+    - hells_paradise
+Apprehend:
+  meaning: Arrest (someone) for a crime
+  example: A warrant was issued but he has not been (...)ed
+  tags:
+    - hells_paradise
+Listless:
+  meaning: (of a person or their manner) lacking energy or enthusiasm
+  example: Bouts of (...) depression
+  tags:
+    - hells_paradise
+Bout:
+  meaning: A short period of intense activity of a specified kind
+  example: Occasional (...)s of strenuous exercise
+  tags:
+    - hells_paradise
+Slight:
+  meaning: Small in degree; inconsiderable
+  example: A (...) increase
+  tags:
+    - hells_paradise
+Chaff:
+  meaning: Worthless things; rubbish
+  example: He hopes to separate scientifically supported claims from pseudoscientific (...)
+  tags:
+    - hells_paradise
+Breakthrough:
+  meaning: A sudden, dramatic, and important discovery or development
+  example: A major (...) in DNA research
+  tags:
+    - rick_and_morty
+Call the shots:
+  meaning: Take the initiative in deciding how something should be done
+  example: We believe in parents and teachers (...)ing
+  tags:
+    - rick_and_morty
+Humble:
+  meaning: Of low social, administrative, or political rank
+  example: She came from a (...), unprivileged background
+  tags:
+    - rick_and_morty
+Motion:
+  meaning: A formal proposal put to a legislature or committee
+  example: Opposition parties tabled a no-confidence (...)
+  tags:
+    - rick_and_morty
+Heckle:
+  meaning: Interrupt (a public speaker) with derisive or aggressive comments or abuse
+  example: He was booed and (...)ed when he tried to address the demonstrators
+  tags:
+    - rick_and_morty
+Clumsily:
+  meaning: In an awkward and careless way
+  example: He climbed (...) over the rail
+  tags:
+    - rick_and_morty
+Alleviate:
+  meaning: Make (suffering, deficiency, or a problem) less severe
+  example: He couldn't prevent her pain, only (...) it
+  tags:
+    - rick_and_morty
+Stickler:
+  meaning: A person who insists on a certain quality or type of behaviour
+  example: He's a (...) for accuracy
+  tags:
+    - rick_and_morty
+Thorn:
+  meaning: A stiff, sharp-pointed woody projection on the stem or other part of a plant
+  example: Rose bushes have (...)
+  tags:
+    - rick_and_morty
+Smear:
+  meaning: Coat or mark (something) messily or carelessly with a greasy or sticky substance
+  example: His face was (...)ed with dirt
+  tags:
+    - rick_and_morty
+Tedious:
+  meaning: Too long, slow, or dull; tiresome or monotonous
+  example: Does this conversation seem (...) to me?
+  tags:
+    - rick_and_morty
+Gross:
+  meaning: Extremely objectionable, offensive, or disgusting
+  example: He wore an outfit that was absolutely (...)
+  tags:
+    - rick_and_morty
+Buckle down:
+  meaning: Tackle a task with determination
+  example: The pair (...) and started to train seriously
+  tags:
+    - rick_and_morty
+Roofie:
+  meaning: Describes someone being raped or sexually assaulted after being spiked with drugs
+  example: They warned the girls that a rapist may try to put a “(...)” in their drink.
+  tags:
+    - rick_and_morty
+Rile up:
+  meaning: To make (someone) very excited
+  example: It doesn't take much to get him (...). [=angry]
+  tags:
+    - rick_and_morty
+Decapitated:
+  meaning: (of a person or animal) having had the head cut off
+  example: A (...) body
+  tags:
+    - rick_and_morty
+Run amok:
+  meaning: Behave uncontrollably and disruptively
+  example: The kids are (...)ing (...) around the house
+  tags:
+    - rick_and_morty
+Plummet:
+  meaning: Fall or drop straight down at high speed
+  example: A climber was killed when he (...)ed 300 feet down an icy gully
+  tags:
+    - rick_and_morty
+Crib:
+  meaning: A child's bed with barred or latticed sides; a cot
+  example: Tiptoeing over to the (...), he looked down at the sleeping child
+  tags:
+    - rick_and_morty
+Leverage:
+  meaning: The exertion of force by means of a lever
+  example: My spade hit something solid that wouldn't respond to (...)
+  tags:
+    - rick_and_morty
+Brink:
+  meaning: The extreme edge of land before a steep slope or a body or water
+  example: The [...] of the cliffs
+  tags:
+    - the_fall_of_house_of_usher
+Shrink:
+  meaning: Become or make smaller in size or amount
+  example: The workforce [] to a thousand
+  tags:
+    - the_fall_of_house_of_usher
+Subpoena:
+  meaning: A writ ordering a person to attend a court
+  example: A [...] may be issued to compel their attendance
+  tags:
+    - the_fall_of_house_of_usher
+Hang up:
+  meaning: Hang from a hook
+  example: Your dressing gown's [...]ing [...] behind the door
+  tags:
+    - the_fall_of_house_of_usher
+Confession:
+  meaning: A formal statement admitting that one is guilty of a crime
+  example: He signed a [...] to both the murders
+  tags:
+    - the_fall_of_house_of_usher
+#???:
+#  meaning:
+#  example:
+#  tags:
+#    - the_fall_of_house_of_usher
