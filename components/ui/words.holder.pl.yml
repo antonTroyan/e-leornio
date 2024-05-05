@@ -4,16 +4,16 @@
 #  tags:
 #    - ...
 
-# https://sjp.pwn.pl/
+# https://pl.wiktionary.org/wiki/Wikis%C5%82ownik:Strona_g%C5%82%C3%B3wna
 
 Bezokolicznik:
-  meaning: Forma czasownika, która wyraża czynność lub stan w sposób abstrakcyjny.
-  example: ...
+  meaning: gram. forma czasownika zazwyczaj nieokreślająca czasu, rodzaju, liczby, osoby, trybu, strony ani aspektu
+  example: (...) jest nieosobową formą czasownika.
   tags:
     - cześć,_skad_jestes?
 Chcieć:
    meaning: Pragnąć, mieć ochotę
-   example: (...) mieć dziecko
+   example: Mamo, nie (...)e dziś iść do szkoły.
    tags:
     - cześć,_skad_jestes?
 Państwo:
@@ -57,8 +57,8 @@ Ołówek:
   tags:
     - mami,_kto_to_jest?
 Długopis:
-  meaning: Przyrząd do pisania z wkładem o kulkowym zakończeniu
-  example: ... coraz częściej spogląda na to, co trzymają w dłoni. Pospolity (...) dyskwalifikuje.
+  meaning: Narzędzie do pisania, w którym pisze się wymiennymi wkładami z atramentem lub żelem
+  example: Wypisał mi się (...), możesz pożyczyć mi coś do pisania?
   tags:
     - mami,_kto_to_jest?
 Komórka:
