@@ -2,7 +2,7 @@ import { entity } from "../types"
 import { rawEntity } from "../types"
 
 // @ts-ignore
-import wordsYml from "./words.holder.en.yml"
+import wordsYml from "./words.holder.pl.yml"
 
 const DEFAULT_COMPLEXITY = 40;
 
