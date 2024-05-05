@@ -3,8 +3,11 @@
 #  example: ...
 #  tags:
 #    - ...
+
+# https://sjp.pwn.pl/
+
 Bezokolicznik:
-  meaning: Forma czasownika, która wyraża czynność lub stan w sposób abstrakcyjny, zazwyczaj bez określania czasu, rodzaju, liczby, osoby, trybu, strony i aspektu.
+  meaning: Forma czasownika, która wyraża czynność lub stan w sposób abstrakcyjny.
   example: ...
   tags:
     - cześć,_skad_jestes?
@@ -14,7 +17,7 @@ Chcieć:
    tags:
     - cześć,_skad_jestes?
 Państwo:
-  meaning: Forma organizacji społeczeństwa mająca na celu stanowienie i wykonywanie prawa na określonym terytorium / zwrot grzecznościowy
+  meaning: Mąż i żona, małżeństwo / kraj
   example: Po jego upadku powstało na wyspie kilka samodzielnych (...) muzułmańskich.
   tags:
     - cześć,_skad_jestes?
@@ -58,7 +61,12 @@ Długopis:
   example: ... coraz częściej spogląda na to, co trzymają w dłoni. Pospolity (...) dyskwalifikuje.
   tags:
     - mami,_kto_to_jest?
-    
+Komórka:
+  meaning: Niewielkie pomieszczenie służące jako skład opału, narzędzi, rupieci / telefon
+  example: Możesz podać mi numer jego (...)i?
+  tags:
+    - mami,_kto_to_jest?
+
     
     
     
