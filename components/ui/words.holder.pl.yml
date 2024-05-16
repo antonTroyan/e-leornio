@@ -66,14 +66,39 @@ Komórka:
   example: Możesz podać mi numer jego (...)i?
   tags:
     - mami,_kto_to_jest?
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
+Osiągać:
+  meaning: Realizować pewien cel
+  example: (...)sz łatwiej cele, o których pozytywnie myślisz.
+  tags:
+    - dzięki_życie[song]
+Błąd:
+  meaning: Niezgodność z zasadami, założeniami
+  example: Publikacja roiła się od (...)ów.
+  tags:
+    - dzięki_życie[song]
+Prędko:
+  meaning: Szybko, z dużą prędkością
+  example: Dziewczynka wbiegła (...) na jezdnię, nie było ratunku.
+  tags:
+    - dzięki_życie[song]
+Piękno:
+  meaning: Zbiór pozytywnych cech (harmonia, proporcja) należących do obiektu, pojęcia
+  example: Pobyt w Rzymie stał się wielkim przeżyciem rozbudzającym wrażliwość na (...) i najwyższe wartości cywilizacyjne.
+  tags:
+    - dzięki_życie[song]
+Haust:
+  meaning: książk. duży łyk płynu lub powietrza
+  example: Jacek pospiesznie opróżnił kubek mleka trzema (...)ami.
+  tags:
+    - dzięki_życie[song]
+Walczyć:
+  meaning: Toczyć walkę, uczestniczyć w walce
+  example: Całe życie (...) o lepsze warunki pracy dla swoich kolegów.
+  tags:
+    - dzięki_życie[song]
+Doświadczenie:
+  meaning: Ogół zdobytych wiadomości i umiejętności
+  example: Profesor przeprowadzał w laboratorium różne (...)a z dziedziny optyki.
+  tags:
+    - dzięki_życie[song]
     
