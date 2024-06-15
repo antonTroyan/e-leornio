@@ -6,133 +6,76 @@
 
 # https://pl.wiktionary.org/wiki/Wikis%C5%82ownik:Strona_g%C5%82%C3%B3wna
 
-Bezokolicznik:
-  meaning: gram. forma czasownika zazwyczaj nieokreślająca czasu, rodzaju, liczby, osoby, trybu, strony ani aspektu
-  example: (...) jest nieosobową formą czasownika.
+# Ne Rozumiju - Vixen
+Samotność:
+  meaning: życie w odosobnieniu, z dala od innych ludzi
+  example: Daj mi lek na [] kiedy, nie mam ochoty na nic
   tags:
-    - krok_po_kroku
-Chcieć:
-   meaning: Pragnąć, mieć ochotę
-   example: Mamo, nie (...)e dziś iść do szkoły.
-   tags:
-    - krok_po_kroku
-Państwo:
-  meaning: Mąż i żona, małżeństwo / kraj
-  example: Po jego upadku powstało na wyspie kilka samodzielnych (...) muzułmańskich.
+    - ne_rousumiju
+    - vixen
+Melodią:
+  meaning: muz. ciąg dźwięków, każdy o określonej wysokości i czasie trwania, rozpoznawany przez słuchacza jako jedna całość
+  example: Bądźmy taką [] która, z głowy nam nie może wyjść
   tags:
-    - krok_po_kroku
-Panowie:
-  meaning: Oficjalna forma grzecznościowa używana przy zwracaniu się do mężczyzny lub w rozmowie o nim
-  example: (...) przehandlowali ją ruskim, gdzie się chłopu do tego pchać było.
+    - ne_rousumiju
+    - vixen    
+Przyszłość:
+  meaning: czas, który dopiero nadejdzie, nastąpi
+  example: Chociaż [] to blind box, ślepo nie patrzmy tu w nią
   tags:
-    - krok_po_kroku
-Świetnie:
-  meaning: Tak dobrze, że można sądzić, że doskonale
-  example: Początkowo plan się powiódł i sprzedaż szła (...).
-  tags:
-    - krok_po_kroku
-Córka:
-  meaning: Czyjeś dziecko płci żeńskiej
-  example: Naprawdę dzisiaj rozmawiałam o moją tylko żeby pamiętać o mojej (...)e.
-  tags:
-    - krok_po_kroku
-Mówić:
-  meaning: Posługiwać się słowami w celu komunikowania myśli i przeżyć lub przekazywania informacji
-  example: Nie (...) hop, póki nie przeskoczysz
-  tags:
-    - krok_po_kroku
-Wiedzieć:
-  meaning: Mieć wiedzę, wiadomości o czymś i być świadomym tego
-  example: Ja kocham siostrę twojego brata. (...)sz?
-  tags:
-    - krok_po_kroku
-Zeszyt:
-  meaning: Pewna ilość kartek papieru do pisania zszytych i oprawionych w okładkę
-  example: O ile cieszy mnie Twoja umiejętność pisania piórem w (...)cie
-  tags:
-    - krok_po_kroku
-Ołówek:
-  meaning: Przyrząd do pisania, rysowania lub kreślenia
-  example: ... konturze mapy, leżą stale na jednej prostej, a wodzik i (...) zakreślają odcinki równoległe.
-  tags:
-    - krok_po_kroku
-Długopis:
-  meaning: Narzędzie do pisania, w którym pisze się wymiennymi wkładami z atramentem lub żelem
-  example: Wypisał mi się (...), możesz pożyczyć mi coś do pisania?
-  tags:
-    - krok_po_kroku
-Komórka:
-  meaning: Niewielkie pomieszczenie służące jako skład opału, narzędzi, rupieci / telefon
-  example: Możesz podać mi numer jego (...)i?
-  tags:
-    - krok_po_kroku
-Osiągać:
-  meaning: Realizować pewien cel
-  example: (...)sz łatwiej cele, o których pozytywnie myślisz.
-  tags:
-    - dzięki_życie[song]
+    - ne_rousumiju
+    - vixen
 Błąd:
-  meaning: Niezgodność z zasadami, założeniami
-  example: Publikacja roiła się od (...)ów.
+  meaning: działanie, które przynosi złe skutki
+  example: Twórzmy niepowtarzalną nawet, powtarzając wciąż ten sam []
   tags:
-    - dzięki_życie[song]
-Prędko:
-  meaning: Szybko, z dużą prędkością
-  example: Dziewczynka wbiegła (...) na jezdnię, nie było ratunku.
+    - ne_rousumiju
+    - vixen
+Dół:
+  meaning: najniższa część czegoś, np. budynku, obrazu, krajobrazu, terenu
+  example: A jak polecę w dół Ty mnie miła ratuj
   tags:
-    - dzięki_życie[song]
-Piękno:
-  meaning: Zbiór pozytywnych cech (harmonia, proporcja) należących do obiektu, pojęcia
-  example: Pobyt w Rzymie stał się wielkim przeżyciem rozbudzającym wrażliwość na (...) i najwyższe wartości cywilizacyjne.
+    - ne_rousumiju
+    - vixen    
+Nastrój:
+  meaning: psych. utrzymujący się jakiś czas stan psychiczny
+  example: A dobrze [] mnie znów
   tags:
-    - dzięki_życie[song]
-Haust:
-  meaning: książk. duży łyk płynu lub powietrza
-  example: Jacek pospiesznie opróżnił kubek mleka trzema (...)ami.
+    - ne_rousumiju
+    - vixen    
+Ratować:
+  meaning: wyciągać kogoś z kłopotów, tarapatów
+  example: []łaś mnie już tyle razy bez słów
   tags:
-    - dzięki_życie[song]
-Walczyć:
-  meaning: Toczyć walkę, uczestniczyć w walce
-  example: Całe życie (...) o lepsze warunki pracy dla swoich kolegów.
+    - ne_rousumiju
+    - vixen
+Ból:
+  meaning: fizj. med. przykre, nieprzyjemne wrażenie fizyczne
+  example: I najlepiej wiesz tu, ile znaczy ten []
   tags:
-    - dzięki_życie[song]
-Doświadczenie:
-  meaning: Ogół zdobytych wiadomości i umiejętności
-  example: Profesor przeprowadzał w laboratorium różne (...)a z dziedziny optyki.
+    - ne_rousumiju
+    - vixen    
+Reszta:
+  meaning: elementy, które zostały
+  example: Reszta ne rozumiju, jak Ty
   tags:
-    - dzięki_życie[song]
-Nałóg:
-  meaning: Zakorzeniony nawyk lub upodobanie zazwyczaj oceniane negatywnie
-  example: Palenie, alkohol, hazard i inne (...)i zmieniły go we wrak człowieka.
+    - ne_rousumiju
+    - vixen
+Szczyt:
+  meaning: najwyższy punkt góry
+  example: Pokaż mi []y gór, drogę śliską jak lód
   tags:
-    - dzięki_życie[song]
-Przodek:
-  meaning: Ktoś, od kogo ktoś pochodzi
-  example: Postanowiłam dowiedzieć się czegoś o moich (...)ach i stworzyć drzewo genealogiczne mojej rodziny.
+    - ne_rousumiju
+    - vixen    
+Pewny:
+  meaning: nie ulegający wątpliwości; taki, który niewątpliwie nastąpi
+  example: Zamiast śniegu syp sól, żebym [] czuł grunt
   tags:
-    - dzięki_życie[song]
-Opowieść:
-  meaning: Opowiadana historia
-  example: Długo snuł swą (...), a my siedzieliśmy zasłuchani.
+    - ne_rousumiju
+    - vixen    
+Stopa:
+  meaning: anat. część ciała tworząca dolny koniec nogi, ograniczona piętą i kostką
+  example: Pod []mi daj Bóg, kiedy trzeba mi zrób ciepłe mleko i miód
   tags:
-    - dzięki_życie[song]
-Wcześnie:
-  meaning: Rano, w pierwszych godzinach po świcie
-  example: Wstaliśmy dzisiaj (...), o piątej.
-  tags:
-    - dzięki_życie[song]    
-Lodowaty:
-  meaning: Zimny jak lód, bardzo zimny
-  example: Był (...), zabójczy dla nagiego człowieka i dużo groźniejszy od słabego, suchego mrozu.
-  tags:
-    - dzięki_życie[song]
-Przejrzeć:
-  meaning: Obejrzeć coś dokładnie, sprawdzając stan tego i/lub jakość
-  example: Wystarczy obejrzeć telewizję, posłuchać radia lub (...) gazetę
-  tags:
-    - dzięki_życie[song]
-Wers:
-  meaning: Podstawowa jednostka wersyfikacyjna, najczęściej złożona z jednej linijki tekstu
-  example: Mój wiersz składa się z dwunastu (...)ów!
-  tags:
-    - dzięki_życie[song]
+    - ne_rousumiju
+    - vixen    
