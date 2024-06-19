@@ -79,3 +79,45 @@ Stopa:
   tags:
     - ne_rousumiju
     - vixen
+Chcieć:
+  meaning: odczuwać chęć zrobienia czegoś
+  example: ()łbym zostać na dłużej by coś jednak we mnie zostało
+  tags:
+    - wróć
+    - baranovski
+Oddychać:
+  meaning: fizj. zool. biol. pobierać tlen z naturalnego dla danego gatunku środowiska
+  example: Mogę spokojnie ()nąć i zrobić wróć
+  tags:
+    - wróć
+    - baranovski
+Utrwalać:
+  meaning: nadawać trwałość, utwierdzać, ugruntowywać
+  example: Bo chciałbym () dobre wspomnienia
+  tags:
+    - wróć
+    - baranovski    
+Pełen:
+  meaning: cały, napełniony do końca
+  example: Pod ten balkon () pnących róż
+  tags:
+    - wróć
+    - baranovski
+Łatwy:
+  meaning: nie wymagający wysiłku, trudu, nie stawiający przeszkód
+  example: By ()ej zrozumieć kim jestem teraz
+  tags:
+    - wróć
+    - baranovski    
+Lecz:
+  meaning: ale
+  example: Powrót do domu zazwyczaj był długi () wiem było warto
+  tags:
+    - wróć
+    - baranovski
+Zawsze:
+  meaning: w każdym momencie i sytuacji, bez przerwy
+  example: Mieć coś na () i żyć bardziej
+  tags:
+    - wróć
+    - baranovski      
