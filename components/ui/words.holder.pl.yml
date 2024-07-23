@@ -129,7 +129,7 @@ Zawsze:
     - baranovski
 Oświecenie:
   meaning: rel. w religiach Wschodu: stan osiągnięty przez wytrwałą medytację
-  example: Słuchasz audycji "1-800-(...)"
+  example: Słuchasz audycji 1-800-(...)
   tags:
     - wielkomiejska_bezsenność
     - taco_hemingway
@@ -145,4 +145,17 @@ Podziękować:
   tags:
     - wielkomiejska_bezsenność
     - taco_hemingway
+Zakamarek:
+  meaning: miejsce trudno dostępne, ukryte
+  example: Noc jest porą, w której (...)i naszej świadomości nawiedzać lubią niepokoje
+  tags:
+    - wielkomiejska_bezsenność
+    - taco_hemingway
+Zajrzeć:
+  meaning: popatrzeć do środka czegoś
+  example: Jednak najlepiej będzie, jeśli (...)sz w głąb siebie
+  tags:
+    - wielkomiejska_bezsenność
+    - taco_hemingway
+
     
