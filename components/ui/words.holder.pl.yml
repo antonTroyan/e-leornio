@@ -165,7 +165,7 @@ Upał:
 Dookoła:
   meaning: ze wszystkich stron
   example: A (...) sami groźni zawodnicy
-    tags:
+  tags:
     - plamy_na_słońcu
     - kazik_na_żywo
 Zmusić:
@@ -207,7 +207,7 @@ Słup:
 Poprzeczka:
   meaning: belka albo listwa umocowana w poprzek czegoś
   example: Gdyby nie słupek gdyby nie (...)
-    tags:
+  tags:
     - plamy_na_słońcu
     - kazik_na_żywo
 Zasadniczo:
