@@ -159,7 +159,7 @@ Zajrzeć:
 Upał:
   meaning: meteorol. okres wysokich temperatur
   example: Plamy na Słońcu (...) na ulicy
-    tags:
+  tags:
     - plamy_na_słońcu
     - kazik_na_żywo
 Dookoła:
@@ -171,37 +171,37 @@ Dookoła:
 Zmusić:
   meaning: nakłonić kogoś przy użyciu wszelkich środków do zrobienia czegoś
   example: Nic mnie nie (...)i dzisiaj do biegania
-    tags:
+  tags:
     - plamy_na_słońcu
     - kazik_na_żywo
 Dzielnica:
   meaning: wydzielona, zwyczajowo lub administracyjnie, część dużego miasta
   example: Cierpi tu z gorąca niemal pół (...)
-    tags:
+  tags:
     - plamy_na_słońcu
     - kazik_na_żywo
 Jęk:
   meaning: żałosny głos wydawany przez człowieka pod wpływem bólu lub cierpienia
   example: Coście porobili i analogiczne (...)i hej
-    tags:
+  tags:
     - plamy_na_słońcu
     - kazik_na_żywo
 Plama:
   meaning: brudny lub oszpecający ślad pozostawiony na powierzchni czegoś
   example: (...)y na Słońcu upał na ulicy
-    tags:
+  tags:
     - plamy_na_słońcu
     - kazik_na_żywo
 Pokonywać:
   meaning: odnosić zwycięstwo nad kimś
   example: Tomasz Adamek braci Kliczków nie (...)a
-    tags:
+  tags:
     - plamy_na_słońcu
     - kazik_na_żywo
 Słup:
   meaning: wysoki, pionowy element konstrukcyjny;
   example: Gdyby nie (...)ek gdyby nie poprzeczka
-    tags:
+  tags:
     - plamy_na_słońcu
     - kazik_na_żywo
 Poprzeczka:
@@ -213,43 +213,43 @@ Poprzeczka:
 Zasadniczo:
   meaning: całkiem, zupełnie, zgoła
   example: I teraz (...) ważna rzecz
-    tags:
+  tags:
     - plamy_na_słońcu
     - kazik_na_żywo
 Dać ciała:
   meaning: zmarnować szansę, zawalić sprawę 
   example: Generalnie ktoś (...)l (...) w temacie rocznicy
-    tags:
+  tags:
     - plamy_na_słońcu
     - kazik_na_żywo
 Docierać:
   meaning: dostawać się, dochodzić dokądś lub do kogoś z trudem
   example: Czy to jeszcze dzisiaj do państwa nie (...)rlo
-    tags:
+  tags:
     - plamy_na_słońcu
     - kazik_na_żywo
 Bramkarz:
   meaning: sport. sportowiec, którego głównym zadaniem podczas gry jest obrona bramki przed strzałem
   example: Najlepszy (...) to jest Bogusław Wyparło
-    tags:
+  tags:
     - plamy_na_słońcu
     - kazik_na_żywo
 Interior:
   meaning: geogr. słabo zagospodarowana część kontynentu lub państwa oddalona od wybrzeża morskiego oraz ośrodków przemysłowych
   example: Przyjechali z (...)u ludzie do stolicy
-    tags:
+  tags:
     - plamy_na_słońcu
     - kazik_na_żywo
 Wspinać:
   meaning: wznosić siebie samego na coś wysokiego
   example: Tutaj musisz (...) się bo zaczynasz od zera
-    tags:
+  tags:
     - plamy_na_słońcu
     - kazik_na_żywo
 Zupełnie:
   meaning: całkowicie, bez reszty
   example: Was wszystkich po obu stronach (...) pojebało
-    tags:
+  tags:
     - plamy_na_słońcu
     - kazik_na_żywo
 
