@@ -6,7 +6,6 @@
 
 # https://pl.wiktionary.org/wiki/Wikis%C5%82ownik:Strona_g%C5%82%C3%B3wna
 
-# Ne Rozumiju - Vixen
 Samotność:
   meaning: życie w odosobnieniu, z dala od innych ludzi
   example: Daj mi lek na (...) kiedy, nie mam ochoty na nic
@@ -157,5 +156,106 @@ Zajrzeć:
   tags:
     - wielkomiejska_bezsenność
     - taco_hemingway
+Upał:
+  meaning: meteorol. okres wysokich temperatur
+  example: Plamy na Słońcu (...) na ulicy
+    tags:
+    - plamy_na_słońcu
+    - kazik_na_żywo
+Dookoła:
+  meaning: ze wszystkich stron
+  example: A (...) sami groźni zawodnicy
+    tags:
+    - plamy_na_słońcu
+    - kazik_na_żywo
+Zmusić:
+  meaning: nakłonić kogoś przy użyciu wszelkich środków do zrobienia czegoś
+  example: Nic mnie nie (...)i dzisiaj do biegania
+    tags:
+    - plamy_na_słońcu
+    - kazik_na_żywo
+Dzielnica:
+  meaning: wydzielona, zwyczajowo lub administracyjnie, część dużego miasta
+  example: Cierpi tu z gorąca niemal pół (...)
+    tags:
+    - plamy_na_słońcu
+    - kazik_na_żywo
+Jęk:
+  meaning: żałosny głos wydawany przez człowieka pod wpływem bólu lub cierpienia
+  example: Coście porobili i analogiczne (...)i hej
+    tags:
+    - plamy_na_słońcu
+    - kazik_na_żywo
+Plama:
+  meaning: brudny lub oszpecający ślad pozostawiony na powierzchni czegoś
+  example: (...)y na Słońcu upał na ulicy
+    tags:
+    - plamy_na_słońcu
+    - kazik_na_żywo
+Pokonywać:
+  meaning: odnosić zwycięstwo nad kimś
+  example: Tomasz Adamek braci Kliczków nie (...)a
+    tags:
+    - plamy_na_słońcu
+    - kazik_na_żywo
+Słup:
+  meaning: wysoki, pionowy element konstrukcyjny;
+  example: Gdyby nie (...)ek gdyby nie poprzeczka
+    tags:
+    - plamy_na_słońcu
+    - kazik_na_żywo
+Poprzeczka:
+  meaning: belka albo listwa umocowana w poprzek czegoś
+  example: Gdyby nie słupek gdyby nie (...)
+    tags:
+    - plamy_na_słońcu
+    - kazik_na_żywo
+Zasadniczo:
+  meaning: całkiem, zupełnie, zgoła
+  example: I teraz (...) ważna rzecz
+    tags:
+    - plamy_na_słońcu
+    - kazik_na_żywo
+Dać ciała:
+  meaning: zmarnować szansę, zawalić sprawę 
+  example: Generalnie ktoś (...)l (...) w temacie rocznicy
+    tags:
+    - plamy_na_słońcu
+    - kazik_na_żywo
+Docierać:
+  meaning: dostawać się, dochodzić dokądś lub do kogoś z trudem
+  example: Czy to jeszcze dzisiaj do państwa nie (...)rlo
+    tags:
+    - plamy_na_słońcu
+    - kazik_na_żywo
+Bramkarz:
+  meaning: sport. sportowiec, którego głównym zadaniem podczas gry jest obrona bramki przed strzałem
+  example: Najlepszy (...) to jest Bogusław Wyparło
+    tags:
+    - plamy_na_słońcu
+    - kazik_na_żywo
+Interior:
+  meaning: geogr. słabo zagospodarowana część kontynentu lub państwa oddalona od wybrzeża morskiego oraz ośrodków przemysłowych
+  example: Przyjechali z (...)u ludzie do stolicy
+    tags:
+    - plamy_na_słońcu
+    - kazik_na_żywo
+Wspinać:
+  meaning: wznosić siebie samego na coś wysokiego
+  example: Tutaj musisz (...) się bo zaczynasz od zera
+    tags:
+    - plamy_na_słońcu
+    - kazik_na_żywo
+Zupełnie:
+  meaning: całkowicie, bez reszty
+  example: Was wszystkich po obu stronach (...) pojebało
+    tags:
+    - plamy_na_słońcu
+    - kazik_na_żywo
+
+
+
+
+
 
     
